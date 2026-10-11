@@ -1,0 +1,2463 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Saddam - Data Scientist &amp; AI Solutions Architect</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              500: '#10b981',
+              600: '#059669',
+            },
+            surface: {
+              900: '#0b1120',
+              950: '#060a12',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- html2canvas and jsPDF for Presentation PDF Downloads -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <style>
+    /* Custom Scrollbars */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080d18;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+
+    /* Fixed Presentation Slide Canvas (16:9 Standard) */
+    .slide-canvas {
+      width: 1280px;
+      height: 720px;
+      min-width: 1280px;
+      min-height: 720px;
+      box-sizing: border-box;
+      transform-origin: top center;
+    }
+
+    /* Interactive Telegram Chat Bubbles */
+    .tg-bubble-user {
+      background: #0284c7;
+      color: #ffffff;
+      border-radius: 14px 14px 2px 14px;
+    }
+    .tg-bubble-bot {
+      background: #1e293b;
+      color: #f1f5f9;
+      border-radius: 14px 14px 14px 2px;
+      border: 1px solid #334155;
+    }
+
+    /* Glassmorphism Classes */
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(51, 65, 85, 0.6);
+    }
+    
+    .glass-card {
+      background: rgba(17, 24, 39, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(55, 65, 81, 0.7);
+    }
+  </style>
+</head>
+
+<body class="bg-[#060a12] text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-white">
+
+  <!-- STICKY TOP NAVIGATION -->
+  <header class="sticky top-0 z-40 w-full border-b border-slate-800/80 bg-[#060a12]/90 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Brand Logo / Identity -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-500 via-sky-500 to-indigo-600 flex items-center justify-center text-white font-black text-sm shadow-lg shadow-emerald-950/40 group-hover:scale-105 transition-transform">
+          SM
+        </div>
+        <div>
+          <span class="text-sm font-bold text-white tracking-tight flex items-center gap-1.5">
+            Muhammad Saddam
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          </span>
+          <span class="text-[11px] text-slate-400 block leading-none">Data Scientist &amp; AI Architect</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Items -->
+      <nav class="hidden md:flex items-center gap-7 text-xs font-semibold text-slate-300">
+        <a href="#about" class="hover:text-emerald-400 transition-colors">Tentang Saya</a>
+        <a href="#experience" class="hover:text-emerald-400 transition-colors">Pengalaman</a>
+        <a href="#skills" class="hover:text-emerald-400 transition-colors">Keahlian</a>
+        <a href="#projects" class="text-white hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+          <span class="px-2 py-0.5 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Proyek Unggulan</span>
+        </a>
+        <a href="#contact" class="hover:text-emerald-400 transition-colors">Kontak</a>
+      </nav>
+
+      <!-- Quick Action Badges -->
+      <div class="flex items-center gap-2.5">
+        <a href="https://wa.me/6287850759362" target="_blank" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20 transition flex items-center gap-1.5">
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span class="hidden sm:inline">+62 878-5075-9362</span>
+        </a>
+        <a href="mailto:saddammaularizal@gmail.com" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-sky-500/10 text-sky-400 border border-sky-500/30 hover:bg-sky-500/20 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-envelope text-xs"></i>
+          <span class="hidden sm:inline">Kirim Email</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative pt-16 pb-20 overflow-hidden border-b border-slate-800/80">
+    <!-- Ambient Backdrop Light -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-emerald-500/10 via-sky-500/10 to-indigo-600/10 blur-[130px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Executive Introduction (7 Cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span class="font-medium text-emerald-400">Tersedia untuk Peluang Penuh Waktu</span>
+            <span class="text-slate-600">•</span>
+            <span class="text-slate-400">Data Scientist &amp; Data Analyst (&lt; 2 Thn Pengalaman)</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
+            Membangun Arsitektur <span class="bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400 bg-clip-text text-transparent">Data &amp; AI Terintegrasi</span> untuk Keputusan Strategis.
+          </h1>
+
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
+            Halo! Saya <b>Muhammad Saddam Maulana Rizal Alyudin</b>, lulusan S1 Statistika Universitas Diponegoro (IPK 3.83 / <i>Cum Laude</i>, 3.5 tahun). Berpengalaman profesional sebagai Data Scientist di <b>PT Bangunindo Teknusa Jaya</b> menangani dasbor terpusat dan automasi AI untuk instansi kementerian (Kemendagri) dan BUMN logistik (Perum BULOG), didukung rekam jejak pemrosesan data statistik &amp; GIS di <b>Badan Pusat Statistik (BPS)</b>.
+          </p>
+
+          <!-- Core Call to Action Buttons -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="#projects" class="px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-xs shadow-lg shadow-emerald-950/40 flex items-center gap-2 transition">
+              <i class="fa-solid fa-layer-group text-xs"></i>
+              <span>Eksplorasi Proyek Unggulan</span>
+            </a>
+            <a href="https://projectscct.tiiny.site" target="_blank" class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-850 text-emerald-400 border border-emerald-500/30 font-bold text-xs flex items-center gap-2 transition">
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              <span>Live Demo SCCT</span>
+            </a>
+            <a href="https://muhammadsaddamprojectberas.tiiny.site" target="_blank" class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-850 text-sky-400 border border-sky-500/30 font-bold text-xs flex items-center gap-2 transition">
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              <span>Live Demo Bulog AI</span>
+            </a>
+            <a href="#contact" class="px-4 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 font-semibold text-xs flex items-center gap-2 transition">
+              <i class="fa-solid fa-address-card text-xs"></i>
+              <span>Hubungi Langsung</span>
+            </a>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 max-w-xl">
+            <div>
+              <p class="text-2xl font-black text-white font-mono">4.5M+ <span class="text-emerald-400 text-sm font-sans">Ton</span></p>
+              <span class="text-[11px] text-slate-400">Data Stok Terpantau di SCCT</span>
+            </div>
+            <div class="border-l border-slate-800 pl-4">
+              <p class="text-2xl font-black text-white font-mono">&lt; 1.5s</p>
+              <span class="text-[11px] text-slate-400">Latensi Analitik Columnar OLAP</span>
+            </div>
+            <div class="border-l border-slate-800 pl-4">
+              <p class="text-2xl font-black text-white font-mono">100%</p>
+              <span class="text-[11px] text-slate-400">Akurasi Transaksi &amp; Safe Rollback</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Executive Profile Snapshot Card (5 Cols) -->
+        <div class="lg:col-span-5">
+          <div class="glass-card rounded-2xl p-6 border border-slate-800 shadow-2xl relative">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-sky-500 to-emerald-500 p-0.5">
+                  <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center text-white font-black text-lg">
+                    MS
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-sm font-bold text-white">Muhammad Saddam</h3>
+                  <span class="text-xs text-emerald-400 font-mono">M. R. Alyudin</span>
+                </div>
+              </div>
+              <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Verified CV</span>
+            </div>
+
+            <!-- Profile Summary Points -->
+            <div class="py-4 space-y-3 text-xs">
+              <div class="flex items-start gap-2.5">
+                <i class="fa-solid fa-graduation-cap text-sky-400 mt-0.5"></i>
+                <div>
+                  <span class="text-slate-400 block text-[11px]">Pendidikan (Akselerasi 3.5 Tahun)</span>
+                  <span class="text-slate-200 font-semibold">S1 Statistika - Universitas Diponegoro (IPK 3.83 / Cum Laude)</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2.5">
+                <i class="fa-solid fa-briefcase text-emerald-400 mt-0.5"></i>
+                <div>
+                  <span class="text-slate-400 block text-[11px]">Pengalaman Profesional</span>
+                  <span class="text-slate-200 font-semibold">~1 Tahun (Mei 2025 - Sekarang) + Proyek Freelance BPS &amp; MSIB</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2.5">
+                <i class="fa-solid fa-certificate text-purple-400 mt-0.5"></i>
+                <div>
+                  <span class="text-slate-400 block text-[11px]">Sertifikasi Kunci</span>
+                  <span class="text-slate-200 font-semibold">ClickHouse Certified Developer • Oracle Academy x Kominfo</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2.5">
+                <i class="fa-solid fa-location-dot text-rose-400 mt-0.5"></i>
+                <div>
+                  <span class="text-slate-400 block text-[11px]">Domisili Saat Ini</span>
+                  <span class="text-slate-200 font-semibold">Semarang, Jawa Tengah, Indonesia</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2.5">
+                <i class="fa-solid fa-shield-halved text-amber-400 mt-0.5"></i>
+                <div>
+                  <span class="text-slate-400 block text-[11px]">Kepatuhan Kerahasiaan (NDA Compliance)</span>
+                  <span class="text-slate-200 font-semibold">Data sensitif instansi disamarkan secara aman ke format dummy/showcase</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct Contact List -->
+        <div class="pt-3 border-t border-slate-800 space-y-2">
+          <a href="https://wa.me/6287850759362" target="_blank" class="w-full flex items-center justify-between p-2.5 rounded-xl bg-slate-900/90 hover:bg-slate-850 border border-slate-800 text-xs text-slate-200 transition">
+            <span class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp Utama</span>
+            <span class="font-mono text-emerald-400 font-bold">+62 878-5075-9362</span>
+          </a>
+          <a href="mailto:saddammaularizal@gmail.com" class="w-full flex items-center justify-between p-2.5 rounded-xl bg-slate-900/90 hover:bg-slate-850 border border-slate-800 text-xs text-slate-200 transition">
+            <span class="flex items-center gap-2"><i class="fa-solid fa-envelope text-sky-400"></i> Email Kerja</span>
+            <span class="font-mono text-slate-300">saddammaularizal@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- SECTION: TENTANG SAYA (ABOUT ME) -->
+<section id="about" class="py-20 border-b border-slate-800/80 bg-[#070c16] scroll-mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+      
+      <!-- Kolom Kiri: Profil Akademik & Keahlian Kuantitatif (5 Cols) -->
+      <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+        <div class="glass-card rounded-2xl p-6 border border-slate-800 relative overflow-hidden">
+          <div class="absolute -top-10 -right-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+          <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+            <div>
+              <span class="text-[10px] text-emerald-400 uppercase tracking-widest font-mono font-bold block">Pendidikan Formal</span>
+              <h3 class="text-base font-bold text-white mt-0.5">S1 Statistika</h3>
+              <span class="text-xs text-slate-400">Universitas Diponegoro</span>
+            </div>
+            <div class="text-right">
+              <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded border border-emerald-800/60 block">IPK 3.83</span>
+              <span class="text-[10px] text-slate-400 block mt-1 font-semibold">Cum Laude</span>
+            </div>
+          </div>
+
+          <div class="py-4 space-y-3 text-xs">
+            <div class="flex items-start gap-2.5">
+              <i class="fa-solid fa-bolt text-amber-400 mt-0.5"></i>
+              <div>
+                <span class="text-slate-400 block text-[11px]">Program Akselerasi</span>
+                <span class="text-slate-200 font-semibold">Menyelesaikan studi sarjana dalam 3.5 Tahun (Jul 2021 - Feb 2025)</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-2.5">
+              <i class="fa-solid fa-certificate text-purple-400 mt-0.5"></i>
+              <div>
+                <span class="text-slate-400 block text-[11px]">Sertifikasi Developer Terverifikasi</span>
+                <span class="text-slate-200 font-semibold">ClickHouse Certified Developer • Oracle Academy x Kemenkominfo</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-2.5">
+              <i class="fa-solid fa-location-dot text-rose-400 mt-0.5"></i>
+              <div>
+                <span class="text-slate-400 block text-[11px]">Domisili Kerja</span>
+                <span class="text-slate-200 font-semibold">Semarang, Jawa Tengah, Indonesia (Tersedia On-Site &amp; Remote)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400 font-mono">Status Ketersediaan:</span>
+            <span class="text-emerald-400 font-bold flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              Open to Opportunities
+            </span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 border border-slate-800 space-y-2">
+          <span class="text-[11px] font-mono text-slate-400 uppercase block font-bold">Kepatuhan Etika &amp; Kerahasiaan (NDA):</span>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Seluruh data operasional sensitif dari instansi kementerian dan BUMN disamarkan secara aman ke format dummy/showcase tanpa mengurangi keaslian arsitektur rekayasa sistem yang dibangun.
+          </p>
+        </div>
+      </div>
+
+      <!-- Kolom Kanan: Narasi Profesional & Filosofi Kerja (7 Cols) -->
+      <div class="lg:col-span-7 flex flex-col justify-between space-y-5">
+        <div>
+          <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono">Tentang Saya</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1 leading-snug">
+            Menghubungkan Metodologi Statistik Kuantitatif dengan Solusi AI Skala Industri.
+          </h2>
+        </div>
+
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          Saya adalah lulusan <b>S1 Statistika Universitas Diponegoro</b> dengan predikat <i>Cum Laude</i> (IPK 3.83) melalui program akselerasi 3.5 tahun. Memiliki fondasi kuantitatif yang kokoh dalam pemodelan data statistik, optimasi kueri SQL, serta otomatisasi alur kerja cerdas (*AI Workflow Automation*).
+        </p>
+
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          Dalam pengalaman profesional ~1 tahun di <b>PT Bangunindo Teknusa Jaya</b> didukung proyek di <b>Badan Pusat Statistik (BPS)</b>, fokus utama saya mencakup perancangan dasbor analitik terpusat (*Apache Superset*, *ClickHouse*, *PostgreSQL*) untuk realisasi APBN/APBD Kemendagri dan monitoring logistik pangan Perum BULOG, pemrosesan geospasial presisi tinggi (*QGIS*), hingga orkestrasi *Conversational AI* (NLP) yang menyederhanakan akses data kompleks bagi pengambil keputusan.
+        </p>
+
+        <!-- 3 Pilar Keunggulan -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1 text-xs">
+          <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-800 space-y-1">
+            <i class="fa-solid fa-chart-column text-emerald-400 text-sm"></i>
+            <h4 class="font-bold text-white text-xs">Ketajaman Kuantitatif</h4>
+            <p class="text-slate-400 text-[11px] leading-relaxed">
+              Validasi metrik, deteksi anomali data, dan perancangan indikator kinerja berbasis metode statistik murni.
+            </p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-800 space-y-1">
+            <i class="fa-solid fa-server text-sky-400 text-sm"></i>
+            <h4 class="font-bold text-white text-xs">Arsitektur Data Cepat</h4>
+            <p class="text-slate-400 text-[11px] leading-relaxed">
+              Penguasaan kueri agregasi OLAP ClickHouse &amp; PostgreSQL berkinerja tinggi pada data puluhan juta baris.
+            </p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-800 space-y-1">
+            <i class="fa-solid fa-brain text-purple-400 text-sm"></i>
+            <h4 class="font-bold text-white text-xs">Otomasi AI Terapan</h4>
+            <p class="text-slate-400 text-[11px] leading-relaxed">
+              Ekstraksi entitas NLP terstruktur dan perancangan bot percakapan transaksional end-to-end terintegrasi API.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tombol Aksi Cepat -->
+        <div class="flex flex-wrap items-center gap-3 pt-2">
+          <a href="#experience" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-850 text-white font-semibold text-xs border border-slate-800 flex items-center gap-2 transition">
+            <i class="fa-solid fa-briefcase text-emerald-400 text-xs"></i>
+            <span>Lihat Rekam Jejak Pengalaman</span>
+          </a>
+          <a href="#projects" class="px-4 py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 font-semibold text-xs border border-emerald-500/30 flex items-center gap-2 transition">
+            <i class="fa-solid fa-layer-group text-xs"></i>
+            <span>Jelajahi Studi Kasus Proyek</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION: EXPERIENCE & PROFESSIONAL TRACK RECORD -->
+<section id="experience" class="py-20 border-b border-slate-800/80 bg-[#070c16]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl mb-12">
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono">Rekam Jejak Karier</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Pengalaman Kerja &amp; Praktik Profesional</h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-2">
+          Rekam jejak profesional ~1 tahun di bidang Data Science &amp; AI Workflow didukung pengalaman pengolahan data geospasial serta sensus nasional di Badan Pusat Statistik (BPS).
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Experience 1: PT Bangunindo Teknusa Jaya (Data Scientist) -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-emerald-500/50 transition">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-800">
+            <div>
+              <div class="flex items-center gap-2.5">
+                <h3 class="text-base font-bold text-white">Data Scientist</h3>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Pengalaman Profesional (&lt; 1.5 Tahun)</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-0.5 font-semibold">PT Bangunindo Teknusa Jaya (Remote)</p>
+            </div>
+            <span class="text-xs font-mono text-emerald-400 bg-emerald-950/40 px-2.5 py-1 rounded border border-emerald-800/50 self-start sm:self-auto">Mei 2025 - Sekarang</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 text-xs">
+            <div class="space-y-2 md:col-span-2">
+              <h4 class="font-bold text-slate-200">Kontribusi &amp; Tanggung Jawab Kunci:</h4>
+              <ul class="text-slate-300 space-y-1.5 leading-relaxed list-disc list-inside">
+                <li><b>Key Project (BUMN Logistik Pangan / Perum BULOG):</b> Membangun dasbor monitoring penjualan produk serta mengintegrasikan AI chatbot untuk kueri percakapan terhadap data monitoring langsung.</li>
+                <li><b>Key Project (Kementerian Dalam Negeri / Kemendagri):</b> Mengembangkan dasbor monitoring nasional terpusat untuk realisasi pendanaan APBN/APBD daerah menggunakan SQL, PostgreSQL, dan ClickHouse.</li>
+                <li>Mengembangkan *AI-powered chatflows*, chatbot (Dify AI/n8n), dan otomasi alur kerja guna menyederhanakan alur pelaporan, manajemen mitra, dan pemantauan data transaksi.</li>
+                <li>Merancang dan mengelola dasbor interaktif menggunakan <b>Apache Superset</b> dengan optimasi kueri SQL berperforma tinggi pada PostgreSQL dan ClickHouse.</li>
+              </ul>
+            </div>
+            <div class="space-y-2 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800/80">
+              <span class="text-[11px] font-bold text-slate-400 block uppercase font-mono">Teknologi &amp; Dampak:</span>
+              <p class="text-emerald-400 font-semibold leading-relaxed">
+                • ClickHouse &amp; PostgreSQL OLAP<br>
+                • Apache Superset BI Dashboards<br>
+                • Dify AI &amp; n8n Chatflows<br>
+                • Client: BUMN &amp; Kementerian Nasional
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2: BPS Kab. Kudus - Geospatial Data Processor -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-sky-500/50 transition">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-800">
+            <div>
+              <div class="flex items-center gap-2.5">
+                <h3 class="text-base font-bold text-white">Geospatial Data Processor</h3>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/30">Freelance Project</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-0.5 font-semibold">Badan Pusat Statistik (BPS) - Kab. Kudus</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-900 px-2.5 py-1 rounded border border-slate-800 self-start sm:self-auto">Agu 2025 - Okt 2025</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 text-xs">
+            <div class="space-y-2 md:col-span-2">
+              <h4 class="font-bold text-slate-200">Kontribusi &amp; Tanggung Jawab Kunci:</h4>
+              <ul class="text-slate-300 space-y-1.5 leading-relaxed list-disc list-inside">
+                <li>Memproses data geospasial menggunakan <b>QGIS</b> untuk pemetaan Satuan Lingkungan Setempat (SLS) dalam rangka persiapan kegiatan Sensus Ekonomi.</li>
+                <li>Menjalankan *boundary tagging*, delineasi batas wilayah SLS, serta validasi integritas data spasial guna menjaga presisi poligon wilayah.</li>
+                <li>Meraih apresiasi sebagai <b>Top-Performing Officer</b> berkat akurasi tinggi dan efisiensi pemrosesan data spasial tercepat.</li>
+              </ul>
+            </div>
+            <div class="space-y-2 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800/80">
+              <span class="text-[11px] font-bold text-slate-400 block uppercase font-mono">Pencapaian:</span>
+              <p class="text-sky-400 font-semibold leading-relaxed">
+                • Pemetaan Geospasial SLS via QGIS<br>
+                • Top-Performing Officer BPS Kudus<br>
+                • Validasi Poligon Batas Ekonomi
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 3: BPS Pemalang & BPS Pusat - Data Processing & Census Specialist -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-indigo-500/50 transition">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-800">
+            <div>
+              <div class="flex items-center gap-2.5">
+                <h3 class="text-base font-bold text-white">Data Validation &amp; Processing Specialist</h3>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/30">Freelance / Proyek Sensus</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-0.5 font-semibold">Badan Pusat Statistik (BPS)</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-900 px-2.5 py-1 rounded border border-slate-800 self-start sm:self-auto">Jun 2023 - Nov 2023</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 text-xs">
+            <div class="space-y-2 md:col-span-2">
+              <h4 class="font-bold text-slate-200">Kontribusi &amp; Tanggung Jawab Kunci:</h4>
+              <ul class="text-slate-300 space-y-1.5 leading-relaxed list-disc list-inside">
+                <li>Mengidentifikasi dan menyelesaikan anomali data pada dataset sensus pertanian dan demografi, berkoordinasi langsung dengan tim pencacah lapangan.</li>
+                <li>Memvalidasi dan memasukkan lebih dari <b>4.600 rekor kuesioner</b> ke dalam sistem BPS dan Excel dengan tingkat akurasi tinggi dan kecepatan penyelesaian terbaik.</li>
+                <li>Melakukan *Editing Coding* Sensus Pertanian di BPS Pemalang pada ~2.500 kuesioner fisik dan spreadsheet Excel secara presisi dengan predikat penyelesaian tercepat.</li>
+              </ul>
+            </div>
+            <div class="space-y-2 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800/80">
+              <span class="text-[11px] font-bold text-slate-400 block uppercase font-mono">Volume &amp; Ketelitian:</span>
+              <p class="text-indigo-300 font-semibold leading-relaxed">
+                • 7.100+ Total Rekor Kuesioner Tervalidasi<br>
+                • Editing Coding Sensus Pertanian<br>
+                • Penyelesaian Tercepat &amp; Nol Anomali
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 4: MSIB Data Science & Oracle Academy Kominfo -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-purple-500/50 transition">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-800">
+            <div>
+              <div class="flex items-center gap-2.5">
+                <h3 class="text-base font-bold text-white">Data Science Apprentice (MSIB) &amp; Database Designer</h3>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/30">MSIB Kampus Merdeka &amp; Kominfo</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-0.5 font-semibold">Celerates Academy &amp; Oracle Academy (Kemenkominfo)</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-900 px-2.5 py-1 rounded border border-slate-800 self-start sm:self-auto">Feb 2024 - Agu 2024</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 text-xs">
+            <div class="space-y-2 md:col-span-2">
+              <h4 class="font-bold text-slate-200">Kompetensi &amp; Proyek:</h4>
+              <ul class="text-slate-300 space-y-1.5 leading-relaxed list-disc list-inside">
+                <li>Menyelesaikan program intensif MSIB Data Scientist di Celerates Academy: pemodelan Machine Learning (Regresi, Klasifikasi, Clustering) dan Deep Learning menggunakan Python (Pandas, NumPy, Scikit-learn, TensorFlow/PyTorch) serta visualisasi Tableau.</li>
+                <li>Merancang skema database relasional di Oracle Academy x Kominfo dengan penerapan *entity modeling*, teknik normalisasi, dan pengindeksan SQL tingkat lanjut.</li>
+              </ul>
+            </div>
+            <div class="space-y-2 bg-slate-900/60 p-3.5 rounded-xl border border-slate-800/80">
+              <span class="text-[11px] font-bold text-slate-400 block uppercase font-mono">Keahlian Teruji:</span>
+              <p class="text-purple-300 font-semibold leading-relaxed">
+                • Python ML &amp; Deep Learning<br>
+                • Relational Database Normalization<br>
+                • Tableau &amp; Advanced Analytics
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: CORE SKILLS & TECH STACK -->
+  <section id="skills" class="py-20 border-b border-slate-800/80 bg-[#060a12]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl mb-12">
+        <span class="text-xs font-bold text-sky-400 uppercase tracking-widest font-mono">Kemampuan Teknis</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Tech Stack &amp; Arsitektur yang Dikuasai</h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-2">
+          Kombinasi analisis data kuantitatif, rekayasa pipeline database modern, serta integrasi model bahasa alami (*Large Language Models*).
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        
+        <!-- Skill 1: Data Science & AI -->
+        <div class="glass-card rounded-xl p-5 border border-slate-800 space-y-3">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-lg">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="text-sm font-bold text-white">Data Science &amp; NLP</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Entity Extraction, Intent Classification, Prompt Engineering, Pemodelan Prediksi (Time-Series, Regresi, Klasifikasi), Validasi Akurasi Metrik.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1 text-[11px]">
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-emerald-300 border border-slate-800">Python</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-emerald-300 border border-slate-800">Dify AI</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-emerald-300 border border-slate-800">LLM Prompting</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-emerald-300 border border-slate-800">Scikit-Learn</span>
+          </div>
+        </div>
+
+        <!-- Skill 2: Database & Big Data OLAP -->
+        <div class="glass-card rounded-xl p-5 border border-slate-800 space-y-3">
+          <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 text-lg">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <h3 class="text-sm font-bold text-white">Database &amp; Columnar OLAP</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            High-throughput aggregation query, data partitioning, deduplikasi, indexing relasional, serta sinkronisasi hybrid OLTP + OLAP.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1 text-[11px]">
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-sky-300 border border-slate-800">ClickHouse</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-sky-300 border border-slate-800">PostgreSQL</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-sky-300 border border-slate-800">Advanced SQL</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-sky-300 border border-slate-800">ETL Pipelines</span>
+          </div>
+        </div>
+
+        <!-- Skill 3: BI & Geospatial Visuals -->
+        <div class="glass-card rounded-xl p-5 border border-slate-800 space-y-3">
+          <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-lg">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <h3 class="text-sm font-bold text-white">Business Intelligence &amp; GIS</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Perancangan dasbor eksekutif, analisis geospasial poligon dan titik sebaran, visualisasi multi-eselon (Sankey), audit umur simpan (FIFO).
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1 text-[11px]">
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-indigo-300 border border-slate-800">Apache Superset</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-indigo-300 border border-slate-800">QGIS / GIS</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-indigo-300 border border-slate-800">Sankey Routing</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-indigo-300 border border-slate-800">KPI Dashboards</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: FEATURED PROJECTS (INTERACTIVE & CLICKABLE SHOWCASE) -->
+  <section id="projects" class="py-20 border-b border-slate-800/80 bg-[#070c16]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14">
+        <div>
+          <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono">Portofolio Studi Kasus</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">Dua Proyek Solusi Unggulan</h2>
+          <p class="text-xs sm:text-sm text-slate-400 mt-2 max-w-xl">
+            Klik dan uji coba langsung fitur interaktifnya di bawah ini: Anda dapat berinteraksi dengan simulasi bot Telegram, mengeksplorasi peta kapasitas logistik, serta membaca dan mengunduh slide presentasi 16:9.
+          </p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+            <i class="fa-solid fa-hand-pointer text-emerald-400 mr-1.5"></i> Interaktif &amp; Dapat Diuji
+          </span>
+        </div>
+      </div>
+
+      <!-- PROJECT 1: SCCT CONTROL TOWER & CONVERSATIONAL BI -->
+      <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800 mb-16 relative overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Detail Kiri (6 Cols) -->
+          <div class="lg:col-span-6 space-y-5">
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">PROJECT 01</span>
+              <span class="text-xs text-slate-400">• Supply Chain &amp; Logistics Intelligence</span>
+            </div>
+
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+              Supply Chain Control Tower (SCCT) &amp; Conversational BI
+            </h3>
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Arsitektur pemantauan persediaan multi-eselon, perutean logistik alternatif (Sankey), analisis ketahanan safety stock, dan asisten AI percakapan untuk kueri metrik lintas-dimensi secara real-time.
+            </p>
+
+            <!-- Feature Tags -->
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">ClickHouse OLAP</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Apache Superset</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Geospatial Heatmap</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Sankey Rerouting</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-emerald-300 border border-emerald-900">Conversational BI</span>
+            </div>
+
+            <!-- Interactive Action Triggers -->
+            <div class="flex flex-wrap items-center gap-3 pt-3">
+              <a href="https://projectscct.tiiny.site" target="_blank" class="px-4 py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 font-bold text-xs flex items-center gap-2 transition">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>Buka Live Website SCCT</span>
+              </a>
+              <button onclick="openInteractiveSim('scct-map')" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-xs shadow-md shadow-emerald-950/40 flex items-center gap-2 transition">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Uji Coba Live Simulator Peta &amp; AI</span>
+              </button>
+              <button onclick="openDeckModal('scct')" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 font-semibold text-xs flex items-center gap-2 transition">
+                <i class="fa-solid fa-expand text-slate-400"></i>
+                <span>Buka Slide Presentasi (13 Slide)</span>
+              </button>
+              <button onclick="triggerDirectPdfDownload('scct')" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-rose-400 border border-slate-800 text-xs font-semibold flex items-center gap-1.5 transition" title="Unduh PDF">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span>PDF</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Preview Interaktif Kanan (6 Cols) -->
+          <div class="lg:col-span-6">
+            <div class="bg-slate-950 rounded-2xl border border-slate-800 p-4 shadow-xl relative group">
+              <!-- Mini Header -->
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800 text-xs">
+                <div class="flex items-center gap-2 text-slate-300 font-semibold">
+                  <i class="fa-solid fa-earth-asia text-emerald-400"></i>
+                  <span>Peta Utilisasi Pergudangan Nasional</span>
+                </div>
+                <span class="text-[10px] bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">Klik Pulau untuk Live Inspect</span>
+              </div>
+
+              <!-- Clickable Mini Map -->
+              <div class="py-4">
+                <svg viewBox="0 0 800 350" class="w-full h-56 filter drop-shadow" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Grid -->
+                  <line x1="0" y1="175" x2="800" y2="175" stroke="#17263b" stroke-width="1" stroke-dasharray="4,4" />
+                  <line x1="400" y1="0" x2="400" y2="350" stroke="#17263b" stroke-width="1" stroke-dasharray="4,4" />
+                  <!-- Islands -->
+                  <path d="M 70 80 L 130 130 L 170 210 L 220 280 L 190 295 L 140 230 L 80 150 L 50 90 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+                  <path d="M 210 320 L 280 322 L 350 325 L 410 330 L 400 345 L 320 342 L 230 338 L 205 328 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+                  <path d="M 270 140 L 350 120 L 390 170 L 370 250 L 300 260 L 250 200 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+                  <path d="M 430 160 L 480 140 L 490 180 L 460 210 L 490 250 L 470 280 L 440 250 L 430 200 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+                  <path d="M 610 190 L 670 180 L 750 210 L 760 280 L 680 270 L 640 230 L 590 210 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+                  <!-- Interactive Region Circles -->
+                  <g onclick="inspectRegion('Sumatera', '55,06%', '1.020.400 Ton', '1.853.000 Ton', 'Sedang')" class="cursor-pointer" transform="translate(130, 180)">
+                    <circle r="32" fill="rgba(245,158,11,0.25)" stroke="#f59e0b" stroke-width="2.5" />
+                    <text text-anchor="middle" y="4" fill="#fcd34d" font-size="11" font-weight="700">55%</text>
+                  </g>
+                  <g onclick="inspectRegion('Jawa', '62,50%', '2.485.495 Ton', '3.976.939 Ton', 'Sedang')" class="cursor-pointer" transform="translate(310, 310)">
+                    <circle r="36" fill="rgba(245,158,11,0.25)" stroke="#f59e0b" stroke-width="2.5" />
+                    <text text-anchor="middle" y="4" fill="#fcd34d" font-size="12" font-weight="700">62.5%</text>
+                  </g>
+                  <g onclick="inspectRegion('Sulawesi', '82,69%', '1.095.365 Ton', '1.324.727 Ton', 'Tinggi (Kritis)')" class="cursor-pointer" transform="translate(460, 200)">
+                    <circle r="34" fill="rgba(239,68,68,0.3)" stroke="#ef4444" stroke-width="2.5" />
+                    <text text-anchor="middle" y="4" fill="#fca5a5" font-size="11" font-weight="700">82.7%</text>
+                  </g>
+                  <g onclick="inspectRegion('Maluku & Papua', '34,56%', '8.847 Ton', '25.600 Ton', 'Rendah (Aman)')" class="cursor-pointer" transform="translate(670, 220)">
+                    <circle r="32" fill="rgba(2,132,199,0.25)" stroke="#0284c7" stroke-width="2.5" />
+                    <text text-anchor="middle" y="4" fill="#7dd3fc" font-size="11" font-weight="700">34.6%</text>
+                  </g>
+                </svg>
+              </div>
+
+              <!-- Live Feedback Bar -->
+              <div class="bg-slate-900 p-3 rounded-xl border border-slate-800 flex items-center justify-between text-xs">
+                <div>
+                  <span class="text-[10px] text-slate-400 block font-mono">Wilayah Terpilih:</span>
+                  <span id="quickRegName" class="font-bold text-white">Jawa (Macro Region)</span>
+                </div>
+                <div>
+                  <span class="text-[10px] text-slate-400 block font-mono">Utilisasi:</span>
+                  <span id="quickRegUtil" class="font-bold text-amber-400">62,50%</span>
+                </div>
+                <div>
+                  <span class="text-[10px] text-slate-400 block font-mono">Status Muatan:</span>
+                  <span id="quickRegStatus" class="font-semibold text-amber-300">Sedang (Normal)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PROJECT 2: ENTERPRISE CONVERSATIONAL AI & TRANSACTION BOT -->
+      <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800 relative overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Detail Kiri (6 Cols) -->
+          <div class="lg:col-span-6 space-y-5">
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-sky-500/10 text-sky-400 border border-sky-500/30">PROJECT 02</span>
+              <span class="text-xs text-slate-400">• Conversational AI &amp; E-Commerce Automation</span>
+            </div>
+
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+              Enterprise Conversational AI &amp; Otomasi Transaksi Retail
+            </h3>
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Implementasi bot transaksi terverifikasi, ekstraksi bahasa alami (NLP) untuk laporan penjualan mitra warung, serta orkestrasi microservice API terdistribusi dengan garansi integritas transaksi (ACID).
+            </p>
+
+            <!-- Feature Tags -->
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Dify AI Workflow</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Telegram Bot API</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-sky-300 border border-sky-900">NLP Entity Extraction</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">PostgreSQL ACID</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Safe Rollback</span>
+            </div>
+
+            <!-- Interactive Action Triggers -->
+            <div class="flex flex-wrap items-center gap-3 pt-3">
+              <a href="https://muhammadsaddamprojectberas.tiiny.site" target="_blank" class="px-4 py-2.5 rounded-xl bg-sky-600/20 hover:bg-sky-600/30 text-sky-300 border border-sky-500/30 font-bold text-xs flex items-center gap-2 transition">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>Buka Live Website Demo</span>
+              </a>
+              <button onclick="openInteractiveSim('telegram')" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white font-bold text-xs shadow-md shadow-sky-950/40 flex items-center gap-2 transition">
+                <i class="fa-brands fa-telegram"></i>
+                <span>Uji Coba Live Bot Simulator (Chat)</span>
+              </button>
+              <button onclick="openDeckModal('bulog')" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 font-semibold text-xs flex items-center gap-2 transition">
+                <i class="fa-solid fa-expand text-slate-400"></i>
+                <span>Buka Slide Presentasi (13 Slide)</span>
+              </button>
+              <button onclick="triggerDirectPdfDownload('bulog')" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-rose-400 border border-slate-800 text-xs font-semibold flex items-center gap-1.5 transition" title="Unduh PDF">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span>PDF</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Preview Interaktif Kanan (6 Cols): Mini Telegram Tester -->
+          <div class="lg:col-span-6">
+            <div class="bg-[#0f1721] rounded-2xl border border-slate-800 overflow-hidden shadow-2xl">
+              <!-- Top Telegram Bar -->
+              <div class="bg-[#17212b] p-3.5 flex items-center justify-between border-b border-[#242f3d]">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white text-xs font-bold">
+                    <i class="fa-solid fa-robot"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-white leading-none">Asisten Virtual Mitra (Live Demo)</h4>
+                    <span class="text-[10px] text-emerald-400 leading-none">online &amp; NLP active</span>
+                  </div>
+                </div>
+                <button onclick="openInteractiveSim('telegram')" class="text-[11px] text-sky-400 hover:underline">
+                  Buka Penuh <i class="fa-solid fa-arrow-up-right-from-square ml-0.5"></i>
+                </button>
+              </div>
+
+              <!-- Chat Sample Logs -->
+              <div class="p-4 space-y-2.5 text-xs font-sans">
+                <!-- User Msg -->
+                <div class="tg-bubble-user p-2.5 max-w-[85%] ml-auto text-right">
+                  Terjual 50kg ke 39 orang dengan harga 61000
+                </div>
+                <!-- Bot Msg -->
+                <div class="tg-bubble-bot p-3 max-w-[90%] space-y-1">
+                  <span class="font-bold text-emerald-400 block"><i class="fa-solid fa-check-circle"></i> Ekstraksi Entitas NLP Berhasil:</span>
+                  <p class="text-slate-300 text-[11.5px]">
+                    📦 Barang: <b>10 Pack (50kg)</b> | 🏷️ Harga: <b>Rp61.000</b><br>
+                    👥 Pembeli: <b>39 Orang</b> | 🧾 Invoice: <code>INV-23c8b116-live</code>
+                  </p>
+                  <span class="text-[10px] text-slate-400 block pt-1 border-t border-slate-700">Ketik "Ya" untuk kirim atau "Batal" untuk membatalkan.</span>
+                </div>
+              </div>
+
+              <!-- Quick Click Prompts to Test -->
+              <div class="p-3 bg-[#131c26] border-t border-[#242f3d] flex flex-wrap gap-1.5 items-center">
+                <span class="text-[10px] font-mono text-slate-400 mr-1">Coba Klik:</span>
+                <button onclick="testQuickPromptInModal('cek katalog')" class="text-[11px] px-2.5 py-1 rounded bg-slate-800 text-sky-300 hover:bg-slate-700 transition">"cek katalog"</button>
+                <button onclick="testQuickPromptInModal('Cek keranjang saya')" class="text-[11px] px-2.5 py-1 rounded bg-slate-800 text-sky-300 hover:bg-slate-700 transition">"Cek keranjang saya"</button>
+                <button onclick="testQuickPromptInModal('cek riwayat pesanan saya')" class="text-[11px] px-2.5 py-1 rounded bg-slate-800 text-sky-300 hover:bg-slate-700 transition">"cek riwayat"</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: CONTACT & CONNECT -->
+  <section id="contact" class="py-20 border-b border-slate-800/80 bg-[#070c16]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono">Hubungi &amp; Kolaborasi</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Siap Berdiskusi Mengenai Peluang Baru</h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-2">
+          Terbuka untuk posisi Data Scientist, AI Solutions Engineer, BI Architect, maupun proyek konsultansi arsitektur data.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto text-xs">
+        
+        <a href="https://wa.me/6287850759362" target="_blank" class="glass-card p-4 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div>
+            <span class="text-[10px] text-slate-400 block uppercase font-mono">WhatsApp</span>
+            <span class="font-bold text-white">+62 878-5075-9362</span>
+          </div>
+        </a>
+
+        <a href="mailto:saddammaularizal@gmail.com" class="glass-card p-4 rounded-xl border border-slate-800 hover:border-sky-500/50 transition flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div>
+            <span class="text-[10px] text-slate-400 block uppercase font-mono">Email Utama</span>
+            <span class="font-bold text-white truncate max-w-[140px] block">saddammaularizal@gmail.com</span>
+          </div>
+        </a>
+
+        <a href="tel:+6285875979481" class="glass-card p-4 rounded-xl border border-slate-800 hover:border-indigo-500/50 transition flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div>
+            <span class="text-[10px] text-slate-400 block uppercase font-mono">Telepon</span>
+            <span class="font-bold text-white">+62 858-7597-9481</span>
+          </div>
+        </a>
+
+        <div class="glass-card p-4 rounded-xl border border-slate-800 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-slate-800 text-slate-300 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <span class="text-[10px] text-slate-400 block uppercase font-mono">Domisili</span>
+            <span class="font-bold text-white">Semarang, Indonesia</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 bg-[#04070d] text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 Muhammad Saddam Maulana Rizal Alyudin. All rights reserved.</p>
+      <div class="flex items-center gap-4 text-slate-400">
+        <a href="#hero" class="hover:text-emerald-400">Kembali ke Atas <i class="fa-solid fa-arrow-up ml-1"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================================
+       MODAL 1: PRESENTATION DECK VIEWER (16:9 RESPONSIVE VIEWPORT)
+       ============================================================== -->
+  <div id="deckModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex-col">
+    <!-- Top Bar Controls -->
+    <div class="h-14 bg-slate-950 border-b border-slate-800 px-6 flex items-center justify-between shrink-0">
+      <div class="flex items-center gap-3">
+        <button onclick="closeDeckModal()" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs transition">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div>
+          <h3 id="modalDeckTitle" class="text-sm font-bold text-slate-100 leading-none">Deck Presentasi Studi Kasus</h3>
+          <p class="text-[11px] text-slate-400 leading-none mt-1">Presentation Canvas 16:9 (1280x720 Standard)</p>
+        </div>
+      </div>
+
+      <!-- Navigation & Page Counter Controls -->
+      <div class="flex items-center gap-3">
+        <button onclick="prevSlide()" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center text-xs transition">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <span id="slideIndicator" class="font-mono text-xs font-bold text-emerald-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+          Slide 1 / 13
+        </span>
+        <button onclick="nextSlide()" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center text-xs transition">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- Export / Fullscreen Actions -->
+      <div class="flex items-center gap-2">
+        <button onclick="downloadCurrentDeckPdf()" id="deckPdfExportBtn" class="text-xs font-bold px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-2 transition">
+          <i class="fa-solid fa-download"></i>
+          <span>Unduh PDF Deck Ini</span>
+        </button>
+        <button onclick="closeDeckModal()" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-rose-950/50 hover:text-rose-400 text-slate-400 flex items-center justify-center text-xs transition">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Presentation Stage Viewport (Dynamic Scale 1280x720) -->
+    <div id="deckViewport" class="flex-1 overflow-auto flex items-center justify-center p-4 bg-[#050810]">
+      <div id="deckStageContainer" class="shadow-2xl rounded-2xl overflow-hidden border border-slate-800/80 transition-transform">
+        <div id="activeSlideMount" class="slide-canvas bg-white"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================================
+       MODAL 2: INTERACTIVE LIVE PROTOTYPES SIMULATOR
+       ============================================================== -->
+  <div id="simModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex-col">
+    <!-- Simulator Topbar -->
+    <div class="h-14 bg-slate-950 border-b border-slate-800 px-6 flex items-center justify-between shrink-0">
+      <div class="flex items-center gap-3">
+        <button onclick="closeInteractiveSim()" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs transition">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div>
+          <h3 id="simModalTitle" class="text-sm font-bold text-slate-100 leading-none">Interactive Prototype Testing</h3>
+          <p id="simModalSubtitle" class="text-[11px] text-slate-400 leading-none mt-1">Uji Coba Langsung Logika &amp; Antarmuka Sistem</p>
+        </div>
+      </div>
+      <div class="text-xs text-emerald-400 font-mono flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>Mock Engine Online</span>
+      </div>
+    </div>
+
+    <!-- Simulator Body Viewport -->
+    <div class="flex-1 p-4 sm:p-6 flex items-center justify-center overflow-auto bg-[#070c14]">
+      
+      <!-- SUB-SIMULATOR 1: TELEGRAM BOT CLIENT -->
+      <div id="tgSimWrapper" class="w-full max-w-xl h-[620px] bg-[#0f1721] rounded-2xl border border-slate-800 shadow-2xl flex flex-col overflow-hidden hidden">
+        <div class="h-14 bg-[#17212b] px-4 flex items-center justify-between border-b border-[#242f3d]">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white font-bold text-sm">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-white">Asisten Virtual Bulog (Live Demo)</h4>
+              <span class="text-[10px] text-emerald-400">bot • online &amp; NLP active</span>
+            </div>
+          </div>
+          <button onclick="resetTelegramChat()" class="text-xs text-slate-400 hover:text-slate-200" title="Reset Percakapan">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+        </div>
+
+        <!-- Chat Bubble Logs -->
+        <div id="tgChatLogs" class="flex-1 p-4 overflow-y-auto space-y-3 font-sans text-xs">
+          <div class="tg-bubble-bot p-3 max-w-[85%]">
+            <p class="font-bold text-sky-400 mb-1">Halo Mitra! 👋 Selamat datang di Asisten Virtual Resmi.</p>
+            <p class="text-slate-300 leading-relaxed">
+              Anda dapat menguji berbagai perintah percakapan transaksional di bawah ini:
+            </p>
+            <div class="mt-2.5 space-y-1.5">
+              <button onclick="sendQuickPrompt('cek katalog')" class="block w-full text-left bg-slate-800/80 hover:bg-slate-700 text-sky-300 p-2 rounded text-[11px] border border-slate-700 transition">1. "cek katalog"</button>
+              <button onclick="sendQuickPrompt('Cek keranjang saya')" class="block w-full text-left bg-slate-800/80 hover:bg-slate-700 text-sky-300 p-2 rounded text-[11px] border border-slate-700 transition">2. "Cek keranjang saya"</button>
+              <button onclick="sendQuickPrompt('Terjual 50kg ke 39 orang dengan harga 61000')" class="block w-full text-left bg-slate-800/80 hover:bg-slate-700 text-emerald-300 p-2 rounded text-[11px] border border-slate-700 transition">3. "Terjual 50kg ke 39 orang dengan harga 61000" (NLP Lapor)</button>
+              <button onclick="sendQuickPrompt('cek riwayat pesanan saya')" class="block w-full text-left bg-slate-800/80 hover:bg-slate-700 text-sky-300 p-2 rounded text-[11px] border border-slate-700 transition">4. "cek riwayat pesanan saya"</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Input Box -->
+        <div class="p-3 bg-[#17212b] border-t border-[#242f3d] flex gap-2">
+          <input 
+            id="tgChatInput" 
+            type="text" 
+            placeholder="Ketik perintah pengujian bot di sini..." 
+            onkeydown="if(event.key === 'Enter') handleTelegramSend()"
+            class="flex-1 bg-[#0f1721] text-xs text-white px-3.5 py-2 rounded-xl border border-[#242f3d] focus:border-sky-500 focus:outline-none placeholder-slate-500"
+          >
+          <button onclick="handleTelegramSend()" class="w-9 h-9 rounded-xl bg-sky-600 hover:bg-sky-500 text-white flex items-center justify-center transition">
+            <i class="fa-solid fa-paper-plane text-xs"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- SUB-SIMULATOR 2: SCCT GEOSPATIAL MAP & DASHBOARD WIDGET -->
+      <div id="scctSimWrapper" class="w-full max-w-4xl bg-slate-900/95 rounded-2xl border border-slate-800 shadow-2xl p-6 hidden flex-col gap-4">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+          <div>
+            <h4 class="text-sm font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-map-location-dot text-emerald-400"></i>
+              <span>National Supply Chain Control Tower (Interactive GIS)</span>
+            </h4>
+            <p class="text-xs text-slate-400">Klik wilayah kepulauan untuk menginspeksi stok aktual, kapasitas, dan batas safety stock</p>
+          </div>
+          <span class="text-xs font-mono bg-emerald-950 text-emerald-300 border border-emerald-800/60 px-2.5 py-1 rounded">
+            Total Stok: 4.546.405 Ton
+          </span>
+        </div>
+
+        <!-- Interactive Map Graphic -->
+        <div class="relative bg-[#0d1624] border border-slate-800 rounded-xl p-4 flex items-center justify-center">
+          <svg viewBox="0 0 800 360" class="w-full h-72" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="180" x2="800" y2="180" stroke="#1a273b" stroke-width="1" stroke-dasharray="4,4" />
+            <line x1="400" y1="0" x2="400" y2="360" stroke="#1a273b" stroke-width="1" stroke-dasharray="4,4" />
+
+            <!-- Island contours -->
+            <path d="M 70 80 L 130 130 L 170 210 L 220 280 L 190 295 L 140 230 L 80 150 L 50 90 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+            <path d="M 210 320 L 280 322 L 350 325 L 410 330 L 400 345 L 320 342 L 230 338 L 205 328 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+            <path d="M 270 140 L 350 120 L 390 170 L 370 250 L 300 260 L 250 200 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+            <path d="M 430 160 L 480 140 L 490 180 L 460 210 L 490 250 L 470 280 L 440 250 L 430 200 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+            <path d="M 540 160 L 570 170 L 560 220 L 530 210 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+            <path d="M 610 190 L 670 180 L 750 210 L 760 280 L 680 270 L 640 230 L 590 210 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+            <path d="M 420 335 L 470 340 L 530 345 L 530 355 L 460 350 L 420 345 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+
+            <!-- Clickable Macro Regions -->
+            <g onclick="inspectRegion('Sumatera', '55,06%', '1.020.400 Ton', '1.853.000 Ton', 'Sedang')" class="cursor-pointer group" transform="translate(130, 180)">
+              <circle r="36" fill="rgba(245,158,11,0.3)" stroke="#f59e0b" stroke-width="3" />
+              <text text-anchor="middle" y="-4" fill="#fff" font-size="10" font-weight="700">SUMATERA</text>
+              <text text-anchor="middle" y="14" fill="#fcd34d" font-size="13" font-weight="800">55,06%</text>
+            </g>
+
+            <g onclick="inspectRegion('Jawa', '62,50%', '2.485.495 Ton', '3.976.939 Ton', 'Sedang')" class="cursor-pointer group" transform="translate(310, 310)">
+              <circle r="40" fill="rgba(245,158,11,0.3)" stroke="#f59e0b" stroke-width="3" />
+              <text text-anchor="middle" y="-4" fill="#fff" font-size="11" font-weight="700">JAWA</text>
+              <text text-anchor="middle" y="15" fill="#fcd34d" font-size="14" font-weight="800">62,50%</text>
+            </g>
+
+            <g onclick="inspectRegion('Kalimantan', '40,18%', '56.765 Ton', '141.274 Ton', 'Rendah (Aman)')" class="cursor-pointer group" transform="translate(320, 190)">
+              <circle r="34" fill="rgba(2,132,199,0.3)" stroke="#0284c7" stroke-width="3" />
+              <text text-anchor="middle" y="-4" fill="#fff" font-size="9" font-weight="700">KALIMANTAN</text>
+              <text text-anchor="middle" y="14" fill="#7dd3fc" font-size="12" font-weight="800">40,18%</text>
+            </g>
+
+            <g onclick="inspectRegion('Sulawesi', '82,69%', '1.095.365 Ton', '1.324.727 Ton', 'Tinggi (Kritis)')" class="cursor-pointer group" transform="translate(460, 200)">
+              <circle r="38" fill="rgba(239,68,68,0.35)" stroke="#ef4444" stroke-width="3" />
+              <text text-anchor="middle" y="-4" fill="#fff" font-size="10" font-weight="700">SULAWESI</text>
+              <text text-anchor="middle" y="15" fill="#fca5a5" font-size="13" font-weight="800">82,69%</text>
+            </g>
+
+            <g onclick="inspectRegion('Bali & Nusa Tenggara', '86,45%', '292.421 Ton', '338.261 Ton', 'Tinggi (Kritis)')" class="cursor-pointer group" transform="translate(470, 320)">
+              <circle r="30" fill="rgba(239,68,68,0.35)" stroke="#ef4444" stroke-width="2.5" />
+              <text text-anchor="middle" y="-2" fill="#fff" font-size="8.5" font-weight="700">BALI/NUSRA</text>
+              <text text-anchor="middle" y="12" fill="#fca5a5" font-size="11" font-weight="800">86,45%</text>
+            </g>
+
+            <g onclick="inspectRegion('Maluku & Papua', '34,56%', '8.847 Ton', '25.600 Ton', 'Rendah (Aman)')" class="cursor-pointer group" transform="translate(670, 220)">
+              <circle r="36" fill="rgba(2,132,199,0.3)" stroke="#0284c7" stroke-width="3" />
+              <text text-anchor="middle" y="-4" fill="#fff" font-size="9" font-weight="700">MALUKU/PAPUA</text>
+              <text text-anchor="middle" y="14" fill="#7dd3fc" font-size="12" font-weight="800">34,56%</text>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Details Bar -->
+        <div id="simRegionDetailBox" class="bg-slate-950 p-4 rounded-xl border border-slate-800 flex items-center justify-between">
+          <div>
+            <span class="text-[11px] text-slate-400 uppercase font-mono">Wilayah Terpilih:</span>
+            <h5 id="simRegName" class="text-sm font-bold text-white">Jawa (Macro Region)</h5>
+          </div>
+          <div>
+            <span class="text-[11px] text-slate-400 uppercase font-mono">Utilisasi Gudang:</span>
+            <h5 id="simRegUtil" class="text-sm font-bold text-amber-400">62,50%</h5>
+          </div>
+          <div>
+            <span class="text-[11px] text-slate-400 uppercase font-mono">Stok Tersedia:</span>
+            <h5 id="simRegStock" class="text-sm font-bold text-sky-400">2.485.495 Ton</h5>
+          </div>
+          <div>
+            <span class="text-[11px] text-slate-400 uppercase font-mono">Status Muatan:</span>
+            <span id="simRegStatus" class="text-xs px-2.5 py-1 rounded bg-amber-950 text-amber-300 border border-amber-800 font-semibold">Sedang</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    /* -------------------------------------------------------------
+       COMPLETE PRESENTATION SLIDE DECKS (13 SLIDES PER PROJECT)
+       ------------------------------------------------------------- */
+    const PROJECT_DECKS = {
+      scct: {
+        title: "Supply Chain Control Tower (SCCT) & Conversational BI",
+        slides: [
+          // Slide 1: Cover
+          `
+          <div class="h-full w-full bg-[#080e1a] text-slate-100 p-16 flex flex-col justify-center relative overflow-hidden">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-xs uppercase font-extrabold tracking-wider px-3 py-1 rounded bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">ENTERPRISE DATA &amp; AI CONTROL TOWER</span>
+              <span class="text-xs text-slate-400 font-medium">• LOGISTICS &amp; NATIONAL SUPPLY INTELLIGENCE</span>
+            </div>
+            <h1 class="text-4xl font-extrabold text-white max-w-4xl leading-tight mb-4">
+              Supply Chain Control Tower (SCCT) &amp; Conversational BI Assistant
+            </h1>
+            <p class="text-base text-slate-300 max-w-3xl leading-relaxed mb-8">
+              Arsitektur pemantauan persediaan multi-eselon, perutean logistik alternatif (Sankey), analisis ketahanan safety stock, dan asisten AI percakapan untuk kueri metrik lintas-dimensi secara real-time.
+            </p>
+            <div class="grid grid-cols-3 gap-6 bg-[#0f172a] p-6 rounded-2xl border border-slate-800 max-w-3xl">
+              <div>
+                <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">Inisiator Proyek</span>
+                <span class="text-sm font-bold text-white">Muhammad Saddam Maulana Rizal Alyudin</span>
+              </div>
+              <div class="border-l border-slate-800 pl-6">
+                <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">Peran Spesialis</span>
+                <span class="text-sm font-bold text-emerald-400">Data Scientist &amp; BI Architect</span>
+              </div>
+              <div class="border-l border-slate-800 pl-6">
+                <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">Tech Stack Inti</span>
+                <span class="text-sm font-medium text-slate-200">ClickHouse, Superset, PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+          `,
+          // Slide 2: Problem & Solution
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-md uppercase">Konteks Bisnis</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Tantangan Visibilitas Rantai Pasok Skala Nasional</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-6 my-auto">
+              <div class="bg-white border-l-4 border-rose-500 rounded-xl p-6 shadow-sm border border-slate-200">
+                <h3 class="text-base font-bold text-rose-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-triangle-exclamation"></i> Hambatan Monitoring Konvensional</h3>
+                <ul class="text-xs text-slate-600 space-y-2.5 leading-relaxed">
+                  <li><b>• Silo Data ERP &amp; Gudang:</b> Data stok fisik tertinggal berhari-hari dibandingkan pergerakan logistik lapangan.</li>
+                  <li><b>• Kompleksitas Multi-Dimensi:</b> Pengambil keputusan kesulitan menggabungkan umur simpan, kapasitas depo, dan buffer stock.</li>
+                  <li><b>• Keterbatasan Ad-hoc Query:</b> Manajemen membutuhkan kueri SQL manual dari data engineer hanya untuk cek sisa kapasitas.</li>
+                </ul>
+              </div>
+              <div class="bg-white border-l-4 border-emerald-500 rounded-xl p-6 shadow-sm border border-slate-200">
+                <h3 class="text-base font-bold text-emerald-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-circle-check"></i> Solusi Terpadu SCCT + AI Assistant</h3>
+                <ul class="text-xs text-slate-600 space-y-2.5 leading-relaxed">
+                  <li><b>• Single Source of Truth:</b> Pipeline agregasi otomatis dari core ERP ke ClickHouse OLAP untuk analisis sub-detik.</li>
+                  <li><b>• Visualisasi Lintas Eselon:</b> Peta kapasitas interaktif, pelacak stok perjalanan, dan diagram alur rute alternatif (Sankey).</li>
+                  <li><b>• Conversational BI Assistant:</b> Chatbot kontekstual di pojok dasbor yang mampu menjawab pertanyaan metrik bebas secara instan.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 gap-4 bg-white p-4 rounded-xl border border-slate-200 text-center">
+              <div><span class="text-[10px] text-slate-400 font-bold uppercase">Cakupan Wilayah</span><p class="text-lg font-extrabold text-slate-900">34 Provinsi</p></div>
+              <div class="border-l border-slate-200"><span class="text-[10px] text-slate-400 font-bold uppercase">Volume Terpantau</span><p class="text-lg font-extrabold text-emerald-600">4.54+ Juta Ton</p></div>
+              <div class="border-l border-slate-200"><span class="text-[10px] text-slate-400 font-bold uppercase">Kapasitas Gudang</span><p class="text-lg font-extrabold text-sky-600">6.66+ Juta Ton</p></div>
+              <div class="border-l border-slate-200"><span class="text-[10px] text-slate-400 font-bold uppercase">Akses Analitik</span><p class="text-lg font-extrabold text-indigo-600">Dashboard + AI</p></div>
+            </div>
+          </div>
+          `,
+          // Slide 3: Architecture
+          `
+          <div class="h-full w-full bg-white text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-indigo-700 bg-indigo-100 px-3 py-1 rounded-md uppercase">Arsitektur Solusi</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Pipeline Sinkronisasi Data &amp; Layer Conversational AI</h2>
+            </div>
+            <div class="bg-[#0b1120] rounded-xl p-5 border border-slate-800 text-white my-3">
+              <div class="grid grid-cols-4 gap-4 text-center">
+                <div class="bg-slate-800/90 border border-sky-500 rounded-lg p-3">
+                  <span class="text-[10px] font-mono text-sky-400 font-bold">LAYER 01</span>
+                  <p class="text-xs font-bold text-white mt-1">Enterprise ERP Core</p>
+                  <span class="text-[10px] text-slate-400">Inventory &amp; WMS Logs</span>
+                </div>
+                <div class="bg-slate-800/90 border border-emerald-500 rounded-lg p-3">
+                  <span class="text-[10px] font-mono text-emerald-400 font-bold">LAYER 02</span>
+                  <p class="text-xs font-bold text-white mt-1">ClickHouse + Postgres</p>
+                  <span class="text-[10px] text-slate-400">Columnar Aggregation</span>
+                </div>
+                <div class="bg-slate-800/90 border border-amber-500 rounded-lg p-3">
+                  <span class="text-[10px] font-mono text-amber-400 font-bold">LAYER 03</span>
+                  <p class="text-xs font-bold text-white mt-1">Apache Superset</p>
+                  <span class="text-[10px] text-slate-400">Geospatial &amp; Sankey</span>
+                </div>
+                <div class="bg-slate-800/90 border border-purple-500 rounded-lg p-3">
+                  <span class="text-[10px] font-mono text-purple-400 font-bold">LAYER 04</span>
+                  <p class="text-xs font-bold text-white mt-1">SCCT AI Assistant</p>
+                  <span class="text-[10px] text-slate-400">Conversational BI</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-5">
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+                <h4 class="text-xs font-bold text-slate-900 mb-1.5 flex items-center gap-1.5"><i class="fa-solid fa-bolt text-sky-600"></i> Kueri Sub-Detik</h4>
+                <p class="text-[11px] text-slate-600 leading-relaxed">Struktur tabel columnar ClickHouse menjamin kueri agregasi puluhan juta baris selesai dalam hitungan ratusan milidetik.</p>
+              </div>
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+                <h4 class="text-xs font-bold text-slate-900 mb-1.5 flex items-center gap-1.5"><i class="fa-solid fa-clock-rotate-left text-emerald-600"></i> Dual-Timestamp Sync</h4>
+                <p class="text-[11px] text-slate-600 leading-relaxed">Transparansi cap waktu update data ERP dan pipeline analitik terpantau langsung di atas dasbor untuk integritas data.</p>
+              </div>
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+                <h4 class="text-xs font-bold text-slate-900 mb-1.5 flex items-center gap-1.5"><i class="fa-solid fa-brain text-purple-600"></i> Semantic AI Layer</h4>
+                <p class="text-[11px] text-slate-600 leading-relaxed">AI Assistant terhubung langsung ke metadata dasbor sehingga kueri bahasa alami langsung dikonversi menjadi angka presisi.</p>
+              </div>
+            </div>
+          </div>
+          `,
+          // Slide 4: Geospatial Map
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-md uppercase">Fitur Utama 01</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Geospatial Inventory &amp; Warehouse Capacity Heatmap</h2>
+            </div>
+            <div class="grid grid-cols-12 gap-6 my-auto items-center">
+              <div class="col-span-5 space-y-3">
+                <h3 class="text-base font-bold text-slate-900">Pemetaan Spasial Kapasitas &amp; Umur Simpan</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Memvisualisasikan titik simpan logistik di seluruh wilayah kepulauan Indonesia secara interaktif. Dilengkapi kategorisasi beban keterisian gudang (*Tinggi, Sedang, Rendah*) serta audit umur simpan (FIFO).
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-slate-200 text-xs text-slate-700 space-y-1">
+                  <b>Audit Umur Simpan Pangan (FIFO):</b>
+                  <div class="text-[11px] text-slate-500">• 0-1 Bulan: 590.960 T | • 1-2 Bulan: 310.147 T</div>
+                  <div class="text-[11px] text-slate-500">• &gt;4 Bulan: 2.740.041 T (Perhatian Rotasi Gudang)</div>
+                </div>
+              </div>
+              <div class="col-span-7 bg-[#0b1424] rounded-xl p-4 border border-slate-800 shadow-md">
+                <div class="flex justify-between items-center text-[10px] text-sky-400 mb-2">
+                  <span>LEVEL: REGIONAL MACRO INDONESIA</span>
+                  <span>UTILISASI NASIONAL: 68,21%</span>
+                </div>
+                <div class="h-56 flex items-center justify-center">
+                  <svg viewBox="0 0 800 360" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 70 80 L 130 130 L 170 210 L 220 280 L 190 295 L 140 230 L 80 150 L 50 90 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+                    <path d="M 210 320 L 280 322 L 350 325 L 410 330 L 400 345 L 320 342 L 230 338 L 205 328 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+                    <path d="M 270 140 L 350 120 L 390 170 L 370 250 L 300 260 L 250 200 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+                    <path d="M 430 160 L 480 140 L 490 180 L 460 210 L 490 250 L 470 280 L 440 250 L 430 200 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+                    <path d="M 610 190 L 670 180 L 750 210 L 760 280 L 680 270 L 640 230 L 590 210 Z" fill="#1b2a40" stroke="#38bdf8" stroke-width="1.5" />
+                    <circle cx="130" cy="180" r="28" fill="rgba(245,158,11,0.4)" stroke="#f59e0b" stroke-width="2"/>
+                    <text x="130" y="184" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">55%</text>
+                    <circle cx="310" cy="310" r="32" fill="rgba(245,158,11,0.4)" stroke="#f59e0b" stroke-width="2"/>
+                    <text x="310" y="314" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">62,5%</text>
+                    <circle cx="460" cy="200" r="30" fill="rgba(239,68,68,0.4)" stroke="#ef4444" stroke-width="2"/>
+                    <text x="460" y="204" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">82,7%</text>
+                    <circle cx="670" cy="220" r="26" fill="rgba(2,132,199,0.4)" stroke="#0284c7" stroke-width="2"/>
+                    <text x="670" y="224" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">34,5%</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2 flex justify-between">
+              <span>Total Stok Nasional: <b>4.546.405 Ton</b></span>
+              <span>Total Kapasitas: <b>6.665.532 Ton</b></span>
+            </div>
+          </div>
+          `,
+          // Slide 5: Actual vs PDP
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-md uppercase">Fitur Utama 02</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Rincian Stok Aktual &amp; Persediaan Dalam Perjalanan (PDP)</h2>
+            </div>
+            <div class="grid grid-cols-3 gap-4 my-2">
+              <div class="bg-white p-4 rounded-xl border border-slate-200 border-t-4 border-t-blue-600">
+                <span class="text-[10px] text-slate-500 uppercase font-bold">Stok Gudang Utama</span>
+                <p class="text-xl font-extrabold text-slate-900 my-1">4.245.346 Ton</p>
+                <span class="text-[11px] text-blue-600 font-semibold"><i class="fa-solid fa-warehouse"></i> Ready Stock Fisik</span>
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-slate-200 border-t-4 border-t-slate-500">
+                <span class="text-[10px] text-slate-500 uppercase font-bold">Gudang Administrasi</span>
+                <p class="text-xl font-extrabold text-slate-900 my-1">72.586 Ton</p>
+                <span class="text-[11px] text-slate-500 font-semibold"><i class="fa-solid fa-file-lines"></i> Buffer Administratif</span>
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-slate-200 border-t-4 border-t-amber-500">
+                <span class="text-[10px] text-slate-500 uppercase font-bold">Gudang Pengolahan</span>
+                <p class="text-xl font-extrabold text-slate-900 my-1">79.156 Ton</p>
+                <span class="text-[11px] text-amber-600 font-semibold"><i class="fa-solid fa-gears"></i> Tahap Milling/Packing</span>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 my-2">
+              <div class="bg-white p-4 rounded-xl border border-slate-200 border-t-4 border-t-emerald-600">
+                <span class="text-[10px] text-slate-500 uppercase font-bold">PDP Movement (Armada Truk/Kapal)</span>
+                <p class="text-xl font-extrabold text-emerald-600 my-1">94.468 Ton</p>
+                <span class="text-[11px] text-slate-500">Stok aktif bergerak dalam moda transportasi antardepo</span>
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-slate-200 border-t-4 border-t-purple-600">
+                <span class="text-[10px] text-slate-500 uppercase font-bold">Sisa Transfer Move In/Out</span>
+                <p class="text-xl font-extrabold text-purple-600 my-1">965.769 / 931.337 T</p>
+                <span class="text-[11px] text-slate-500">Antrean mutasi barang masuk &amp; keluar antarcabang</span>
+              </div>
+            </div>
+            <div class="bg-blue-50 border border-blue-200 p-2.5 rounded-lg text-xs text-blue-900 flex items-center gap-2">
+              <i class="fa-solid fa-shield-halved text-blue-600"></i>
+              <span><b>Integritas Data:</b> Mencegah phantom inventory melalui pemisahan stok riil di gudang dengan tonase yang masih berjalan di jalan tol/laut.</span>
+            </div>
+          </div>
+          `,
+          // Slide 6: Sankey Flow
+          `
+          <div class="h-full w-full bg-white text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-amber-700 bg-amber-100 px-3 py-1 rounded-md uppercase">Fitur Utama 03</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Optimasi Perutean Logistik Alternatif (Sankey Diagram)</h2>
+            </div>
+            <div class="grid grid-cols-12 gap-6 my-auto items-center">
+              <div class="col-span-5 space-y-3">
+                <h3 class="text-base font-bold text-slate-900">Mitigasi Kemacetan Pasokan Antar-Wilayah</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Ketika suatu depo penerima mengalami kepenuhan muatan (*congestion*), diagram alur Sankey membantu penanggung jawab logistik memetakan jalur alternatif tercepat dari wilayah pengirim terdekat.
+                </p>
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded text-xs text-amber-900">
+                  <b>Remaining Capacity Engine:</b><br>
+                  Menghitung sisa kapasitas depo secara real-time (misal: Tangerang sisa 86.663 Ton / 72% kosong) sehingga pengalihan muatan tidak menimbulkan overload baru.
+                </div>
+              </div>
+              <div class="col-span-7 bg-slate-50 rounded-xl p-4 border border-slate-200 space-y-2.5">
+                <div class="flex justify-between text-[11px] font-bold text-slate-500 border-b pb-1">
+                  <span>REGION PENGIRIM (ORIGIN)</span>
+                  <span>REGION PENERIMA &amp; KAPASITAS</span>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2 text-xs">
+                    <span class="w-32 bg-blue-700 text-white font-bold p-1.5 rounded text-center text-[10px]">Lampung Sel.</span>
+                    <div class="flex-1 h-3.5 bg-gradient-to-r from-blue-300 to-pink-300 rounded"></div>
+                    <span class="w-44 bg-pink-50 border border-pink-200 text-[10px] p-1 rounded font-semibold text-pink-700">Bukit Tinggi (Sisa 1.227 T / 29%)</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs">
+                    <span class="w-32 bg-sky-700 text-white font-bold p-1.5 rounded text-center text-[10px]">Tulang Bawang</span>
+                    <div class="flex-1 h-4 bg-gradient-to-r from-sky-300 to-emerald-300 rounded"></div>
+                    <span class="w-44 bg-emerald-50 border border-emerald-200 text-[10px] p-1 rounded font-semibold text-emerald-700">Tangerang (Sisa 86.663 T / 72%)</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs">
+                    <span class="w-32 bg-emerald-700 text-white font-bold p-1.5 rounded text-center text-[10px]">Lhokseumawe</span>
+                    <div class="flex-1 h-3.5 bg-gradient-to-r from-emerald-300 to-amber-300 rounded"></div>
+                    <span class="w-44 bg-amber-50 border border-amber-200 text-[10px] p-1 rounded font-semibold text-amber-700">Serang (Sisa 12.683 T / 22%)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2 flex justify-between">
+              <span>*Ketebalan pita aliran proporsional dengan tonase alokasi pengalihan</span>
+              <span class="text-emerald-600 font-bold">Multi-Echelon Dynamic Rerouting Active</span>
+            </div>
+          </div>
+          `,
+          // Slide 7: Safety Stock
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-md uppercase">Fitur Utama 04</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Ketahanan Stok terhadap Safety Stock &amp; Disparitas Wilayah</h2>
+            </div>
+            <div class="grid grid-cols-12 gap-6 my-auto items-center">
+              <div class="col-span-5 space-y-3">
+                <h3 class="text-base font-bold text-slate-900">Pemantauan Batas Cadangan Kritis</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Membandingkan stok aktual terhadap batas cadangan minimum (*Safety Stock*). Mencegah daerah kepulauan terpencil kehabisan cadangan logistik pokok.
+                </p>
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="bg-white p-3 rounded-lg border border-slate-200 text-center">
+                    <span class="text-[10px] text-slate-400 font-bold uppercase">SAFETY STOCK NASIONAL</span>
+                    <p class="text-base font-extrabold text-slate-900">375.003 Ton</p>
+                  </div>
+                  <div class="bg-white p-3 rounded-lg border border-slate-200 text-center">
+                    <span class="text-[10px] text-slate-400 font-bold uppercase">RASIO KETAHANAN</span>
+                    <p class="text-base font-extrabold text-emerald-600">1.212,37%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-7 bg-white rounded-xl p-4 border border-slate-200 space-y-2">
+                <span class="text-xs font-bold text-slate-800 block">Stok Aktual vs Buffer Stock (Kanwil)</span>
+                <div class="space-y-2 text-xs">
+                  <div>
+                    <div class="flex justify-between text-[11px] mb-0.5"><span>Jatim (Surplus Tertinggi)</span><span class="font-bold">1,17 Juta T (Buffer 43rb T)</span></div>
+                    <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden"><div class="bg-blue-700 h-full w-[95%]"></div></div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-[11px] mb-0.5"><span>Sulselbar</span><span class="font-bold">968 Ribu T (Buffer 42rb T)</span></div>
+                    <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden"><div class="bg-blue-700 h-full w-[80%]"></div></div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-[11px] mb-0.5"><span>Jabar</span><span class="font-bold">645 Ribu T (Buffer 35rb T)</span></div>
+                    <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden"><div class="bg-blue-700 h-full w-[55%]"></div></div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-[11px] text-rose-600 mb-0.5"><span class="font-bold">Maluku &amp; Papua (Zona Kritis)</span><span class="font-bold">24 Ribu T (Buffer 18rb T)</span></div>
+                    <div class="w-full bg-rose-100 h-2.5 rounded-full overflow-hidden"><div class="bg-rose-600 h-full w-[12%]"></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2 flex justify-between">
+              <span>Ambang Batas Peringatan: Rasio Stok &lt; 150% terhadap Safety Stock</span>
+              <span class="text-rose-600 font-bold">Auto-alert Kanwil Timur</span>
+            </div>
+          </div>
+          `,
+          // Slide 8: Conversational BI Assistant
+          `
+          <div class="h-full w-full bg-white text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-purple-700 bg-purple-100 px-3 py-1 rounded-md uppercase">Fitur Kunci Inovasi AI</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Conversational BI: Chatbot Tanya Metrik Lintas-Dasbor</h2>
+            </div>
+            <div class="grid grid-cols-12 gap-6 my-auto items-center">
+              <div class="col-span-6 space-y-3">
+                <h3 class="text-base font-bold text-slate-900">Zero-Click BI Querying via Natural Language</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Banyak eksekutif tidak punya waktu membuka puluhan filter kompleks. SCCT Assistant tertanam langsung di sudut dasbor untuk mengekstrak jawaban metrik dalam waktu di bawah 2 detik.
+                </p>
+                <div class="bg-purple-50 border border-purple-200 rounded-xl p-3 text-xs text-purple-950 space-y-1">
+                  <b>Keunggulan Conversational BI:</b>
+                  <p class="text-[11px] text-purple-800">• Menghitung rasio komparatif yang tidak tampil di kartu KPI dasbor.</p>
+                  <p class="text-[11px] text-purple-800">• Mengurai kueri multi-wilayah dan multi-kondisi stok dalam 1 prompt.</p>
+                </div>
+              </div>
+              <div class="col-span-6 bg-slate-900 rounded-2xl border border-slate-800 p-4 text-white shadow-lg space-y-3">
+                <div class="flex items-center gap-2 border-b border-slate-800 pb-2">
+                  <div class="w-6 h-6 rounded-md bg-purple-600 flex items-center justify-center text-xs"><i class="fa-solid fa-message"></i></div>
+                  <span class="text-xs font-bold">SCCT Assistant (Embedded Widget)</span>
+                </div>
+                <div class="space-y-2 text-xs">
+                  <div class="bg-purple-950/60 border border-purple-800 p-2.5 rounded-lg text-purple-200">
+                    User: <i>"Berapa stok PDP yang sedang bergerak menuju Jawa Timur?"</i>
+                  </div>
+                  <div class="bg-slate-800 p-2.5 rounded-lg text-slate-200 border border-slate-700">
+                    Bot: <b>PDP Menuju Jatim saat ini 14.820 Ton</b> (8 armada truk kontainer sedang dalam perjalanan tol Trans-Jawa).
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2 flex justify-between">
+              <span>Terkoneksi langsung ke ClickHouse Columnar Engine</span>
+              <span class="text-purple-600 font-bold">Avg Response: 1.8s</span>
+            </div>
+          </div>
+          `,
+          // Slide 9: Simulated Dialogues
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-md uppercase">Studi Kasus Interaksi</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Simulasi Penarikan Metrik Cepat via AI Assistant</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-5 my-auto">
+              <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                <span class="text-[10px] font-bold text-sky-700 uppercase bg-sky-50 px-2 py-0.5 rounded">SKENARIO 1: AUDIT BUFFER STOCK</span>
+                <p class="text-xs text-slate-800 font-bold">"Berapa total stok PDP dan apakah aman dari target buffer nasional?"</p>
+                <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 text-xs text-slate-700 leading-relaxed">
+                  Bot merespons: <i>"Total PDP tercatat 148.298 Ton. Buffer nasional 375.003 Ton. Status saat ini sangat aman, total fisik gudang 4,24 Juta Ton (1.212% di atas batas kritis)."</i>
+                </div>
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                <span class="text-[10px] font-bold text-emerald-700 uppercase bg-emerald-50 px-2 py-0.5 rounded">SKENARIO 2: REKOMENDASI REROUTING</span>
+                <p class="text-xs text-slate-800 font-bold">"Rekomendasikan gudang alternatif dari Tulang Bawang jika Serang penuh."</p>
+                <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 text-xs text-slate-700 leading-relaxed">
+                  Bot merespons: <i>"Berdasarkan sisa kapasitas Sankey, depo tujuan teroptimal adalah Depo Tangerang dengan sisa 86.663 Ton (72% kosong), dibandingkan Serang yang terisi 78%."</i>
+                </div>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2 flex justify-between">
+              <span>Akurasi Kueri Metrik: 100% (Verifikasi Metadata)</span>
+              <span class="text-emerald-600 font-bold">Zero-Hallucination Query Design</span>
+            </div>
+          </div>
+          `,
+          // Slide 10: Performance Impact
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-md uppercase">Hasil &amp; Efisiensi</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Dampak Implementasi SCCT &amp; AI Querying</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-6 my-auto">
+              <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h4 class="text-sm font-bold text-slate-900 mb-2 flex items-center gap-2"><i class="fa-solid fa-clock text-sky-600"></i> Efisiensi Waktu Pengambilan Keputusan</h4>
+                <p class="text-xs text-slate-600 leading-relaxed">Sebelumnya dibutuhkan 3–4 hari untuk rekonsiliasi manual gudang cabang. Kini data agregasi nasional siap dalam hitungan detik setelah sinkronisasi pipeline.</p>
+                <span class="inline-block mt-3 text-xs font-bold text-sky-600">Efisiensi Waktu: ~80% Lebih Cepat</span>
+              </div>
+              <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h4 class="text-sm font-bold text-slate-900 mb-2 flex items-center gap-2"><i class="fa-solid fa-filter-circle-dollar text-emerald-600"></i> Reduksi Biaya Demurrage &amp; Reroute</h4>
+                <p class="text-xs text-slate-600 leading-relaxed">Melalui visualisasi rute Sankey, armada pengiriman dapat langsung dialihkan sebelum truk/kapal menumpuk di gudang penerima yang kelebihan beban.</p>
+                <span class="inline-block mt-3 text-xs font-bold text-emerald-600">Mitigasi Antrean Truk di Gerbang Gudang</span>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4 bg-white p-4 rounded-xl border border-slate-200 text-center">
+              <div><p class="text-2xl font-extrabold text-sky-600">&lt; 1,5 Detik</p><span class="text-xs text-slate-500 font-semibold">Latensi Kueri ClickHouse</span></div>
+              <div class="border-l border-slate-200"><p class="text-2xl font-extrabold text-emerald-600">100%</p><span class="text-xs text-slate-500 font-semibold">Visibilitas Stok Gudang &amp; PDP</span></div>
+              <div class="border-l border-slate-200"><p class="text-2xl font-extrabold text-purple-600">3x Lipat</p><span class="text-xs text-slate-500 font-semibold">Kecepatan Akses via AI</span></div>
+            </div>
+          </div>
+          `,
+          // Slide 11: Limitations
+          `
+          <div class="h-full w-full bg-white text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-rose-700 bg-rose-100 px-3 py-1 rounded-md uppercase">Evaluasi Kritis</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Keterbatasan Sistem Saat Ini</h2>
+            </div>
+            <div class="grid grid-cols-3 gap-5 my-auto">
+              <div class="bg-rose-50/60 border border-rose-200 rounded-xl p-5 flex flex-col justify-between">
+                <div>
+                  <span class="text-[10px] font-mono text-rose-600 font-bold">LIMITASI 01</span>
+                  <h4 class="text-sm font-bold text-rose-900 mt-1 mb-2">Interval Batch ERP</h4>
+                  <p class="text-xs text-rose-800 leading-relaxed">Sinkronisasi data dari ERP utama saat ini berjalan pada interval batch berkala (harian), belum sepenuhnya event-driven streaming detik-ke-detik.</p>
+                </div>
+                <span class="text-[11px] font-bold text-rose-700 mt-4 border-t border-rose-200 pt-2"><i class="fa-solid fa-clock"></i> Mitigasi: Timestamp di Dasbor</span>
+              </div>
+              <div class="bg-rose-50/60 border border-rose-200 rounded-xl p-5 flex flex-col justify-between">
+                <div>
+                  <span class="text-[10px] font-mono text-rose-600 font-bold">LIMITASI 02</span>
+                  <h4 class="text-sm font-bold text-rose-900 mt-1 mb-2">Sankey Deskriptif</h4>
+                  <p class="text-xs text-rose-800 leading-relaxed">Diagram Sankey memvisualisasikan opsi rute berdasarkan sisa kapasitas fisik, namun belum memasukkan dinamika tarif tol dan armada real-time.</p>
+                </div>
+                <span class="text-[11px] font-bold text-rose-700 mt-4 border-t border-rose-200 pt-2"><i class="fa-solid fa-route"></i> Mitigasi: Validasi Lapangan</span>
+              </div>
+              <div class="bg-rose-50/60 border border-rose-200 rounded-xl p-5 flex flex-col justify-between">
+                <div>
+                  <span class="text-[10px] font-mono text-rose-600 font-bold">LIMITASI 03</span>
+                  <h4 class="text-sm font-bold text-rose-900 mt-1 mb-2">Akses AI Read-Only</h4>
+                  <p class="text-xs text-rose-800 leading-relaxed">Chatbot saat ini hanya melayani permintaan baca (*read query*), belum dapat menerbitkan Delivery Order (DO) otomatis dari chat.</p>
+                </div>
+                <span class="text-[11px] font-bold text-rose-700 mt-4 border-t border-rose-200 pt-2"><i class="fa-solid fa-lock"></i> Mitigasi: Hak Akses Khusus</span>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2">
+              Analisis ini menjamin transparansi teknis dalam implementasi korporat.
+            </div>
+          </div>
+          `,
+          // Slide 12: Roadmap
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-md uppercase">Roadmap Strategis</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Rencana Pengembangan Masa Depan</h2>
+            </div>
+            <div class="grid grid-cols-3 gap-5 my-auto">
+              <div class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between shadow-sm">
+                <div>
+                  <span class="text-[10px] font-bold text-sky-700 uppercase bg-sky-50 px-2 py-0.5 rounded">FASE 1: PRESCRIPTIVE AI</span>
+                  <h4 class="text-sm font-bold text-slate-900 mt-2 mb-2">Route Optimization Solver</h4>
+                  <p class="text-xs text-slate-600 leading-relaxed">Menggabungkan linear programming (Google OR-Tools) ke diagram Sankey agar sistem otomatis memilih rute dengan ongkos logistik per ton terendah.</p>
+                </div>
+                <span class="text-[11px] font-bold text-sky-600 mt-4 border-t border-slate-100 pt-2">Target: Efisiensi Biaya 8-12%</span>
+              </div>
+              <div class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between shadow-sm">
+                <div>
+                  <span class="text-[10px] font-bold text-sky-700 uppercase bg-sky-50 px-2 py-0.5 rounded">FASE 2: REAL-TIME STREAMING</span>
+                  <h4 class="text-sm font-bold text-slate-900 mt-2 mb-2">Kafka CDC &amp; Telematika GPS</h4>
+                  <p class="text-xs text-slate-600 leading-relaxed">Mengintegrasikan Change Data Capture (Debezium/Kafka) langsung dari database WMS dan GPS armada truk untuk update PDP detik-ke-detik.</p>
+                </div>
+                <span class="text-[11px] font-bold text-sky-600 mt-4 border-t border-slate-100 pt-2">Target: Latensi Update &lt; 5 Detik</span>
+              </div>
+              <div class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between shadow-sm">
+                <div>
+                  <span class="text-[10px] font-bold text-sky-700 uppercase bg-sky-50 px-2 py-0.5 rounded">FASE 3: AUTONOMOUS ACTION</span>
+                  <h4 class="text-sm font-bold text-slate-900 mt-2 mb-2">Autonomous DO Execution</h4>
+                  <p class="text-xs text-slate-600 leading-relaxed">Meningkatkan AI dari pembaca metrik menjadi agen yang dapat menyusun draft perintah transfer barang antardepo dengan konfirmasi multi-otoritas.</p>
+                </div>
+                <span class="text-[11px] font-bold text-sky-600 mt-4 border-t border-slate-100 pt-2">Target: Integrasi API ERP 2 Arah</span>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2">
+              Jadwal bertahap untuk adaptasi mulus di infrastruktur skala nasional.
+            </div>
+          </div>
+          `,
+          // Slide 13: Closing
+          `
+          <div class="h-full w-full bg-[#080e1a] text-slate-100 p-16 flex flex-col justify-center items-center text-center relative overflow-hidden">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs uppercase font-extrabold tracking-wider px-3 py-1 rounded bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">TECHNICAL PORTFOLIO SUMMARY</span>
+              <span class="text-xs text-slate-400 font-medium">• DATA-DRIVEN LOGISTICS INTELLIGENCE</span>
+            </div>
+            <h1 class="text-3xl font-extrabold text-white max-w-3xl leading-tight mb-4">
+              Mengubah Kompleksitas Rantai Pasok Menjadi Keputusan Cepat Berbasis AI
+            </h1>
+            <p class="text-sm text-slate-300 max-w-2xl leading-relaxed mb-8">
+              Berpengalaman membangun arsitektur analitik terintegrasi, visualisasi multi-eselon, serta penerapan conversational BI untuk mempercepat efisiensi logistik skala nasional.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+              <div class="bg-slate-900 px-5 py-3 rounded-xl border border-slate-800 text-left">
+                <span class="text-[10px] text-slate-400 uppercase font-bold block">Email Profesional</span>
+                <span class="text-xs font-bold text-slate-200">saddammaularizal@gmail.com</span>
+              </div>
+              <div class="bg-slate-900 px-5 py-3 rounded-xl border border-slate-800 text-left">
+                <span class="text-[10px] text-slate-400 uppercase font-bold block">WhatsApp</span>
+                <span class="text-xs font-bold text-emerald-400">+62 878-5075-9362</span>
+              </div>
+              <div class="bg-slate-900 px-5 py-3 rounded-xl border border-slate-800 text-left">
+                <span class="text-[10px] text-slate-400 uppercase font-bold block">Domisili</span>
+                <span class="text-xs font-bold text-slate-200">Semarang, Indonesia</span>
+              </div>
+            </div>
+          </div>
+          `
+        ]
+      },
+      bulog: {
+        title: "Enterprise Conversational AI & Otomasi Transaksi Logistik Pangan",
+        slides: [
+          // Slide 1: Cover
+          `
+          <div class="h-full w-full bg-[#090d16] text-slate-100 p-16 flex flex-col justify-center relative overflow-hidden">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-xs uppercase font-extrabold tracking-wider px-3 py-1 rounded bg-sky-500/15 text-sky-400 border border-sky-500/30">STUDI KASUS TEKNIS DATA &amp; AI WORKFLOW</span>
+              <span class="text-xs text-slate-400 font-medium">• LOGISTIK PANGAN &amp; RETAIL MITRA</span>
+            </div>
+            <h1 class="text-4xl font-extrabold text-white max-w-4xl leading-tight mb-4">
+              Enterprise Conversational AI &amp; Otomasi Transaksi Logistik Pangan
+            </h1>
+            <p class="text-base text-slate-300 max-w-3xl leading-relaxed mb-8">
+              Implementasi bot transaksi terverifikasi, ekstraksi bahasa alami (NLP) untuk laporan penjualan mitra, serta orkestrasi microservice API terdistribusi.
+            </p>
+            <div class="grid grid-cols-3 gap-6 bg-[#111827] p-6 rounded-2xl border border-slate-800 max-w-3xl">
+              <div>
+                <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">Inisiator &amp; Pengembang</span>
+                <span class="text-sm font-bold text-white">Muhammad Saddam Maulana Rizal Alyudin</span>
+              </div>
+              <div class="border-l border-slate-800 pl-6">
+                <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">Peran Teknis</span>
+                <span class="text-sm font-bold text-sky-400">Data Scientist &amp; AI Workflow Engineer</span>
+              </div>
+              <div class="border-l border-slate-800 pl-6">
+                <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">Tech Stack Utama</span>
+                <span class="text-sm font-medium text-slate-200">Dify AI, Telegram API, PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+          `,
+          // Slide 2: Context
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-md uppercase">Konteks Lapangan</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Latar Belakang &amp; Tantangan Distribusi Komoditas</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-6 my-auto">
+              <div class="bg-white border-l-4 border-rose-500 rounded-xl p-6 shadow-sm border border-slate-200">
+                <h3 class="text-base font-bold text-rose-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-triangle-exclamation"></i> Hambatan Sebelum Otomasi</h3>
+                <ul class="text-xs text-slate-600 space-y-2.5 leading-relaxed">
+                  <li><b>• Pelaporan Penjualan Tak Terstruktur:</b> Mitra warung melaporkan serapan beras secara informal via chat tanpa format baku.</li>
+                  <li><b>• Rekapitulasi Manual &amp; Lambat:</b> Tim admin gudang menyita waktu berjam-jam merekap transaksi harian ke spreadsheet.</li>
+                  <li><b>• Friksi Pemesanan &amp; Kuota:</b> Pengecekan limit pembelian sering terkendala antrean balasan manual admin.</li>
+                </ul>
+              </div>
+              <div class="bg-white border-l-4 border-sky-500 rounded-xl p-6 shadow-sm border border-slate-200">
+                <h3 class="text-base font-bold text-sky-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-circle-check"></i> Solusi Chatflow Terintegrasi</h3>
+                <ul class="text-xs text-slate-600 space-y-2.5 leading-relaxed">
+                  <li><b>• Asisten Percakapan Mitra 24/7:</b> Kanal Telegram bot otomatis yang mudah dipahami ratusan mitra pedagang pasar.</li>
+                  <li><b>• NLP Entity Extraction:</b> Mengekstrak kuantitas, harga, dan pembeli dari teks bebas menjadi data SQL siap olah.</li>
+                  <li><b>• Safe Rollback &amp; ACID State:</b> Menjamin pesanan yang dibatalkan tidak meninggalkan tagihan menggantung.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2 flex justify-between">
+              <span>Fokus: Efisiensi jalur komunikasi mitra harian</span>
+              <span class="text-sky-600 font-bold">100% Validasi Transaksi</span>
+            </div>
+          </div>
+          `,
+          // Slide 3: Workflow Architecture
+          `
+          <div class="h-full w-full bg-white text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-md uppercase">Desain Rekayasa Sistem</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Arsitektur Orkestrasi Chatflow Modular</h2>
+            </div>
+            <div class="bg-[#090d16] rounded-xl p-5 border border-slate-800 text-white my-3">
+              <div class="grid grid-cols-4 gap-4 text-center">
+                <div class="bg-slate-800/90 border border-sky-500 rounded-lg p-3">
+                  <span class="text-[10px] font-mono text-sky-400 font-bold">NODE 01</span>
+                  <p class="text-xs font-bold text-white mt-1">Telegram Ingestion</p>
+                  <span class="text-[10px] text-slate-400">User Context &amp; Msg ID</span>
+                </div>
+                <div class="bg-slate-800/90 border border-amber-500 rounded-lg p-3">
+                  <span class="text-[10px] font-mono text-amber-400 font-bold">NODE 02</span>
+                  <p class="text-xs font-bold text-white mt-1">Intent Classifier</p>
+                  <span class="text-[10px] text-slate-400">Branching Logic (10+ Intent)</span>
+                </div>
+                <div class="bg-slate-800/90 border border-emerald-500 rounded-lg p-3">
+                  <span class="text-[10px] font-mono text-emerald-400 font-bold">NODE 03</span>
+                  <p class="text-xs font-bold text-white mt-1">Microservices API</p>
+                  <span class="text-[10px] text-slate-400">Sub-workflow HTTP Run</span>
+                </div>
+                <div class="bg-slate-800/90 border border-purple-500 rounded-lg p-3">
+                  <span class="text-[10px] font-mono text-purple-400 font-bold">NODE 04</span>
+                  <p class="text-xs font-bold text-white mt-1">Sanitizer &amp; Output</p>
+                  <span class="text-[10px] text-slate-400">Telegram Markdown Format</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-5">
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+                <h4 class="text-xs font-bold text-slate-900 mb-1.5"><i class="fa-solid fa-shield-halved text-sky-600 mr-1.5"></i> Penyaringan Awal</h4>
+                <p class="text-[11px] text-slate-600 leading-relaxed">Validasi format input, pemfilteran pesan negatif, dan verifikasi status blacklist nomor mitra.</p>
+              </div>
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+                <h4 class="text-xs font-bold text-slate-900 mb-1.5"><i class="fa-solid fa-arrows-split-up-and-left text-sky-600 mr-1.5"></i> Sub-Workflow Mandiri</h4>
+                <p class="text-[11px] text-slate-600 leading-relaxed">WF KATALOG, WF ORDER, dan WF LAPOR terisolasi secara modular sehingga pembaruan tidak mengganggu alur lain.</p>
+              </div>
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+                <h4 class="text-xs font-bold text-slate-900 mb-1.5"><i class="fa-solid fa-rotate-left text-sky-600 mr-1.5"></i> Exception Handling</h4>
+                <p class="text-[11px] text-slate-600 leading-relaxed">Jalur exception terpusat (auto-retry 3x pada kegagalan HTTP POST) mencegah bot terhenti tanpa balasan.</p>
+              </div>
+            </div>
+          </div>
+          `,
+          // Slide 4: Feature 1 Authentication
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-md uppercase">Fitur Utama 01</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Autentikasi Akun Mitra &amp; Session Tracking</h2>
+            </div>
+            <div class="grid grid-cols-12 gap-6 my-auto items-center">
+              <div class="col-span-6 space-y-3">
+                <h3 class="text-base font-bold text-slate-900">Perlindungan Data Akses &amp; Keamanan Sesi</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Sebelum mitra dapat mengakses data sensitif seperti riwayat transaksi, limit pembelian, dan saldo, bot mewajibkan verifikasi kredensial dua parameter.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-slate-200 text-xs space-y-1">
+                  <b>Karakteristik Keamanan Kunci:</b>
+                  <p class="text-[11px] text-slate-600">• Masked Transmission: Nomor HP dan password dienkripsi ke backend.</p>
+                  <p class="text-[11px] text-slate-600">• Persistent State: Sesi pengguna diikat pada Telegram User ID.</p>
+                </div>
+              </div>
+              <div class="col-span-6 bg-[#0f1721] rounded-2xl p-4 border border-slate-800 text-white shadow-lg space-y-2 text-xs">
+                <div class="text-[11px] text-sky-400 font-bold border-b border-slate-800 pb-1">MOCKUP UI AUTENTIKASI TELEGRAM</div>
+                <div class="bg-sky-600 text-white p-2 rounded-lg max-w-[80%] ml-auto">Saya mau login</div>
+                <div class="bg-slate-800 p-2.5 rounded-lg max-w-[90%] leading-relaxed">
+                  Selamat datang di Layanan Mitra 👋<br>
+                  Format input: <code>NomorHP , Password</code>
+                </div>
+                <div class="bg-sky-600 text-white p-2 rounded-lg max-w-[80%] ml-auto">085775817•••, ••••••••</div>
+                <div class="bg-slate-800 border-l-4 border-emerald-500 p-2.5 rounded-lg max-w-[90%] text-emerald-300">
+                  🎉 Login berhasil. Sesi Anda sudah tercatat.
+                </div>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2 flex justify-between">
+              <span>Security Compliance: Data sensitif disamarkan</span>
+              <span class="text-emerald-600 font-bold">Stateful Session Token</span>
+            </div>
+          </div>
+          `,
+          // Slide 5: Feature 2 NLP Lapor Penjualan
+          `
+          <div class="h-full w-full bg-white text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-md uppercase">Fitur Utama 02 (Teknologi Kunci)</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Ekstraksi Entitas Penjualan NLP &amp; Pembuatan Invoice</h2>
+            </div>
+            <div class="grid grid-cols-12 gap-6 my-auto items-center">
+              <div class="col-span-6 space-y-3">
+                <h3 class="text-base font-bold text-slate-900">Parsing Teks Bebas Menjadi Data Transaksi Terstruktur</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Mitra tidak perlu mengisi form web kaku. Bot mengekstrak variabel kuantitas, harga, dan pembeli dari percakapan sehari-hari secara otomatis.
+                </p>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-3 text-xs text-emerald-950 space-y-1">
+                  <b>Konversi Cerdas:</b>
+                  <p class="text-[11px] text-emerald-800">"50kg" otomatis dikonversi menjadi "10 Pack (Beras 5kg)" sesuai master katalog.</p>
+                  <p class="text-[11px] text-emerald-800">No. Invoice unik langsung diterbitkan dan disinkronkan ke PostgreSQL.</p>
+                </div>
+              </div>
+              <div class="col-span-6 bg-[#0f1721] rounded-2xl p-4 border border-slate-800 text-white shadow-lg space-y-2 text-xs">
+                <div class="text-[11px] text-emerald-400 font-bold border-b border-slate-800 pb-1">MOCKUP UI LAPOR PENJUALAN NLP</div>
+                <div class="bg-sky-600 text-white p-2 rounded-lg max-w-[85%] ml-auto">
+                  Terjual 50kg ke 39 orang dengan harga 61000
+                </div>
+                <div class="bg-slate-800 border-l-4 border-sky-400 p-2.5 rounded-lg max-w-[90%] space-y-1 text-slate-200">
+                  <p class="font-bold text-white">✅ Konfirmasi Laporan Penjualan</p>
+                  <p>📦 Barang: <b>10 Pack (50kg)</b> | 🏷️ Harga: <b>Rp61.000</b></p>
+                  <p>👥 Pembeli: <b>39 Orang</b> | 🧾 Invoice: <code>INV-23c8b116•••</code></p>
+                  <p class="text-sky-300">Ketik "Ya" untuk kirim laporan.</p>
+                </div>
+                <div class="bg-sky-600 text-white p-2 rounded-lg max-w-[50%] ml-auto">Ya</div>
+                <div class="bg-emerald-950 text-emerald-300 p-2 rounded-lg max-w-[90%] border border-emerald-800">
+                  🎉 Laporan Berhasil Dikirim! Data penjualan sudah masuk ke sistem monitoring.
+                </div>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2 flex justify-between">
+              <span>Model Ekstraksi: Few-Shot NLP Prompting</span>
+              <span class="text-emerald-600 font-bold">100% Akurat Terpetakan</span>
+            </div>
+          </div>
+          `,
+          // Slide 6: Feature 3 Catalog & Cart
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-md uppercase">Fitur Utama 03</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Katalog Produk Live &amp; Manajemen Keranjang</h2>
+            </div>
+            <div class="grid grid-cols-12 gap-6 my-auto items-center">
+              <div class="col-span-6 space-y-3">
+                <h3 class="text-base font-bold text-slate-900">Manajemen Pembelian Tanpa Keluar dari Chat</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Mitra dapat melihat kuota resmi Beras SPHP, memeriksa isi keranjang belanja, dan melakukan penyesuaian kuantitas secara langsung dengan sintaks percakapan terpadu.
+                </p>
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="bg-white p-3 rounded-lg border border-slate-200">
+                    <span class="text-xs font-bold text-slate-800">Katalog Real-Time</span>
+                    <p class="text-[11px] text-slate-500 mt-1">Ditarik seketika dari database sentral untuk mencegah selisih harga.</p>
+                  </div>
+                  <div class="bg-white p-3 rounded-lg border border-slate-200">
+                    <span class="text-xs font-bold text-slate-800">Kontrol Keranjang</span>
+                    <p class="text-[11px] text-slate-500 mt-1">Dukungan perintah cepat Ubah, Tambah, atau Kurangi kuantitas item.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-6 bg-[#0f1721] rounded-2xl p-4 border border-slate-800 text-white shadow-lg space-y-2 text-xs">
+                <div class="bg-sky-600 text-white p-2 rounded-lg max-w-[80%] ml-auto">Cek keranjang saya</div>
+                <div class="bg-slate-800 p-3 rounded-lg max-w-[90%] space-y-1 text-slate-200">
+                  <p class="font-bold text-white">Halo Mitra 👋 Berikut isi keranjang Anda:</p>
+                  <p>📦 Produk: <b>Beras SPHP 5 Kg</b></p>
+                  <p>🔢 Jumlah: <b>200 Pack (1.000 Kg)</b></p>
+                  <p>💰 Total: <b>Rp 12.500.000</b></p>
+                  <p class="text-slate-400 text-[10px] mt-1">Perintah: Ubah / Tambah / Kurangi / CHECKOUT</p>
+                </div>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2 flex justify-between">
+              <span>Sinkronisasi Keranjang: Session-Persistent DB</span>
+              <span class="text-sky-600 font-bold">Zero Friction Shopping</span>
+            </div>
+          </div>
+          `,
+          // Slide 7: Feature 4 Checkout & Safe Rollback
+          `
+          <div class="h-full w-full bg-white text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-rose-700 bg-rose-100 px-3 py-1 rounded-md uppercase">Fitur Utama 04 (Integritas Transaksi)</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Opsi Checkout &amp; Safe State Rollback</h2>
+            </div>
+            <div class="grid grid-cols-12 gap-6 my-auto items-center">
+              <div class="col-span-6 space-y-3">
+                <h3 class="text-base font-bold text-slate-900">Jaminan Konsistensi ACID &amp; Anti Tagihan Hantu</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Saat proses checkout dibatalkan sebelum komitmen akhir, bot secara aktif melakukan <i>safe rollback</i>. Tidak ada Virtual Account hantu atau tagihan tertinggal di basis data.
+                </p>
+                <div class="bg-rose-50 border border-rose-200 rounded-xl p-3 text-xs text-rose-950 space-y-1">
+                  <b>Pencegahan Deadlock Transaksi:</b>
+                  <p class="text-[11px] text-rose-800">Status transaksi langsung dialihkan ke "Dibatalkan Instan" dan limit kuota mitra dikembalikan dalam milidetik.</p>
+                </div>
+              </div>
+              <div class="col-span-6 bg-[#0f1721] rounded-2xl p-4 border border-slate-800 text-white shadow-lg space-y-2 text-xs">
+                <div class="bg-sky-600 text-white p-2 rounded-lg max-w-[80%] ml-auto">Transfer, dikirim</div>
+                <div class="bg-slate-800 p-2.5 rounded-lg max-w-[90%] text-slate-200">
+                  Konfirmasi: Total Rp 12.500.000. Ketik <b>Ya</b> untuk proses atau <b>Batal</b>.
+                </div>
+                <div class="bg-rose-600 text-white p-2 rounded-lg max-w-[50%] ml-auto">Batal</div>
+                <div class="bg-slate-800 border-l-4 border-rose-500 p-2.5 rounded-lg max-w-[90%] text-rose-300">
+                  🚫 <b>Pesanan Dibatalkan.</b> Tidak ada tagihan yang dibuat untuk transaksi ini.
+                </div>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2 flex justify-between">
+              <span>Mekanisme: Database Transaction Rollback</span>
+              <span class="text-rose-600 font-bold">100% Aman Tanpa Tagihan Hantu</span>
+            </div>
+          </div>
+          `,
+          // Slide 8: Feature 5 Query DB Riwayat
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-md uppercase">Fitur Utama 05</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Kueri Database Dinamis &amp; Audit Riwayat Transaksi</h2>
+            </div>
+            <div class="grid grid-cols-12 gap-6 my-auto items-center">
+              <div class="col-span-6 space-y-3">
+                <h3 class="text-base font-bold text-slate-900">Pemisahan Status Riwayat Secara Presisi</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Bot membedakan maksud kueri untuk riwayat pesanan selesai vs riwayat pesanan yang dibatalkan, menyajikan nota digital terstruktur langsung ke layar chat.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-slate-200 text-xs space-y-1">
+                  <b>Nilai Tambah untuk Auditor &amp; Mitra:</b>
+                  <p class="text-[11px] text-slate-600">• Pelacakan ID unik hash (misal: <code>865fc824</code>) untuk audit gudang.</p>
+                  <p class="text-[11px] text-slate-600">• Rekonsiliasi instan nilai rupiah tanpa jeda kalkulasi.</p>
+                </div>
+              </div>
+              <div class="col-span-6 bg-[#0f1721] rounded-2xl p-4 border border-slate-800 text-white shadow-lg space-y-2 text-xs">
+                <div class="bg-sky-600 text-white p-2 rounded-lg max-w-[80%] ml-auto">cek riwayat pesanan saya</div>
+                <div class="bg-slate-800 p-3 rounded-lg max-w-[90%] space-y-1.5 text-slate-200">
+                  <p class="font-bold text-emerald-400">✅ Riwayat Pesanan Selesai (total: 2)</p>
+                  <div class="border-t border-slate-700 pt-1 text-[11px]">
+                    🧾 ID: <code>865fc824</code> | Beras SPHP 5 Kg (100 Pcs)<br>
+                    💰 Total: Rp6.250.000 | 🟢 Status: <b>Sudah Sampai</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2 flex justify-between">
+              <span>Engine: PostgreSQL Index Query</span>
+              <span class="text-emerald-600 font-bold">Audit-Ready Ledger</span>
+            </div>
+          </div>
+          `,
+          // Slide 9: Onboarding & Support
+          `
+          <div class="h-full w-full bg-white text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-md uppercase">User Experience</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Onboarding Terpandu &amp; Pusat Bantuan Mitra</h2>
+            </div>
+            <div class="grid grid-cols-12 gap-6 my-auto items-center">
+              <div class="col-span-6 space-y-3">
+                <h3 class="text-base font-bold text-slate-900">Menurunkan Hambatan Adopsi Mitra Lapangan</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Sebagian besar mitra warung memerlukan antarmuka yang sangat ramah pengguna. Bot dilengkapi menu sambutan terstruktur dan edukasi istilah platform.
+                </p>
+                <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 text-xs space-y-1">
+                  <b>Menu Panduan:</b>
+                  <p class="text-[11px] text-slate-600">1. Melihat katalog produk resmi</p>
+                  <p class="text-[11px] text-slate-600">2. Cara checkout &amp; pembayaran Virtual Account</p>
+                  <p class="text-[11px] text-slate-600">3. Pelaporan hasil penjualan harian</p>
+                </div>
+              </div>
+              <div class="col-span-6 bg-[#0f1721] rounded-2xl p-4 border border-slate-800 text-white shadow-lg space-y-2 text-xs">
+                <div class="bg-sky-600 text-white p-2 rounded-lg max-w-[60%] ml-auto">Halo bot</div>
+                <div class="bg-slate-800 p-3 rounded-lg max-w-[90%] space-y-1 text-slate-200 text-[11px]">
+                  <p class="font-bold text-white text-xs">Halo! Selamat datang di Layanan Asisten Virtual Resmi.</p>
+                  <p>📦 Melihat Katalog Produk</p>
+                  <p>🛒 Memesan &amp; Menambah ke Keranjang</p>
+                  <p>📈 Melaporkan Penjualan (Khusus Mitra Penjual)</p>
+                  <p class="text-sky-300 mt-1">Silakan ketik atau jelaskan apa yang Anda butuhkan.</p>
+                </div>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2 flex justify-between">
+              <span>Channel: Telegram Bot API</span>
+              <span class="text-sky-600 font-bold">24/7 Availability</span>
+            </div>
+          </div>
+          `,
+          // Slide 10: Data Pipeline & Analytics
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-md uppercase">Data Pipeline &amp; Monitoring</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Sinkronisasi Kueri Database Skala Besar</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-6 my-auto">
+              <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h4 class="text-sm font-bold text-slate-900 mb-2 flex items-center gap-2"><i class="fa-solid fa-database text-sky-600"></i> Dual-Layer Architecture (OLTP + OLAP)</h4>
+                <p class="text-xs text-slate-600 leading-relaxed">Transaksi operasional bot disimpan di PostgreSQL untuk integritas ACID, kemudian dialirkan ke ClickHouse untuk kueri analitik dan agregasi super cepat.</p>
+              </div>
+              <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h4 class="text-sm font-bold text-slate-900 mb-2 flex items-center gap-2"><i class="fa-solid fa-chart-line text-sky-600"></i> Apache Superset Dashboard</h4>
+                <p class="text-xs text-slate-600 leading-relaxed">Hasil penjualan mitra yang dicatat bot otomatis teragregasi di dashboard manajemen, memantau laju serapan pangan per wilayah secara real-time.</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4 bg-white p-4 rounded-xl border border-slate-200 text-center">
+              <div><p class="text-2xl font-extrabold text-sky-600">&lt; 2 Detik</p><span class="text-xs text-slate-500 font-semibold">Latensi Respon Bot</span></div>
+              <div class="border-l border-slate-200"><p class="text-2xl font-extrabold text-emerald-600">100%</p><span class="text-xs text-slate-500 font-semibold">Validasi Invoice Transaksi</span></div>
+              <div class="border-l border-slate-200"><p class="text-2xl font-extrabold text-purple-600">24 / 7</p><span class="text-xs text-slate-500 font-semibold">Ketersediaan Kanal Mitra</span></div>
+            </div>
+          </div>
+          `,
+          // Slide 11: Limitations
+          `
+          <div class="h-full w-full bg-white text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-rose-700 bg-rose-100 px-3 py-1 rounded-md uppercase">Evaluasi Kritis</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Keterbatasan Sistem Saat Ini</h2>
+            </div>
+            <div class="grid grid-cols-3 gap-5 my-auto">
+              <div class="bg-rose-50/60 border border-rose-200 rounded-xl p-5 flex flex-col justify-between">
+                <div>
+                  <span class="text-[10px] font-mono text-rose-600 font-bold">LIMITASI 01</span>
+                  <h4 class="text-sm font-bold text-rose-900 mt-1 mb-2">Variasi Bahasa Daerah</h4>
+                  <p class="text-xs text-rose-800 leading-relaxed">Parsing teks NLP bekerja optimal pada bahasa Indonesia baku atau gaul standar. Campuran bahasa daerah kental masih membutuhkan panduan konfirmasi.</p>
+                </div>
+                <span class="text-[11px] font-bold text-rose-700 mt-4 border-t border-rose-200 pt-2"><i class="fa-solid fa-language"></i> Mitigasi: Fallback Form</span>
+              </div>
+              <div class="bg-rose-50/60 border border-rose-200 rounded-xl p-5 flex flex-col justify-between">
+                <div>
+                  <span class="text-[10px] font-mono text-rose-600 font-bold">LIMITASI 02</span>
+                  <h4 class="text-sm font-bold text-rose-900 mt-1 mb-2">Latensi Sandbox API</h4>
+                  <p class="text-xs text-rose-800 leading-relaxed">Eksekusi sub-workflow API sandbox pihak ketiga terkadang mengalami lonjakan latensi respons pada jam kerja puncak (peak traffic).</p>
+                </div>
+                <span class="text-[11px] font-bold text-rose-700 mt-4 border-t border-rose-200 pt-2"><i class="fa-solid fa-server"></i> Mitigasi: Auto-Retry Async</span>
+              </div>
+              <div class="bg-rose-50/60 border border-rose-200 rounded-xl p-5 flex flex-col justify-between">
+                <div>
+                  <span class="text-[10px] font-mono text-rose-600 font-bold">LIMITASI 03</span>
+                  <h4 class="text-sm font-bold text-rose-900 mt-1 mb-2">Autentikasi Non-OTP</h4>
+                  <p class="text-xs text-rose-800 leading-relaxed">Mekanisme login saat ini masih bertumpu pada password statis dan belum dilengkapi Two-Factor Authentication (2FA) via SMS/WhatsApp OTP.</p>
+                </div>
+                <span class="text-[11px] font-bold text-rose-700 mt-4 border-t border-rose-200 pt-2"><i class="fa-solid fa-key"></i> Mitigasi: Enkripsi Backend</span>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2">
+              Evaluasi ini menunjukkan kematangan perancangan dan kepekaan terhadap celah operasional.
+            </div>
+          </div>
+          `,
+          // Slide 12: Roadmap
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-md uppercase">Roadmap Strategis</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Rencana Pengembangan Masa Depan</h2>
+            </div>
+            <div class="grid grid-cols-3 gap-5 my-auto">
+              <div class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between shadow-sm">
+                <div>
+                  <span class="text-[10px] font-bold text-sky-700 uppercase bg-sky-50 px-2 py-0.5 rounded">FASE 1: MULTIMODAL VOICE</span>
+                  <h4 class="text-sm font-bold text-slate-900 mt-2 mb-2">Speech-to-Text Whisper AI</h4>
+                  <p class="text-xs text-slate-600 leading-relaxed">Menambahkan kemampuan menerima voice note Telegram agar pedagang pasar yang sibuk dapat melaporkan penjualan cukup berbicara tanpa mengetik.</p>
+                </div>
+                <span class="text-[11px] font-bold text-sky-600 mt-4 border-t border-slate-100 pt-2">Target: Transkripsi &lt; 3 Detik</span>
+              </div>
+              <div class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between shadow-sm">
+                <div>
+                  <span class="text-[10px] font-bold text-sky-700 uppercase bg-sky-50 px-2 py-0.5 rounded">FASE 2: DEMAND PREDICTION</span>
+                  <h4 class="text-sm font-bold text-slate-900 mt-2 mb-2">Demand Forecasting Gudang</h4>
+                  <p class="text-xs text-slate-600 leading-relaxed">Mengintegrasikan model time-series machine learning pada data serapan untuk otomatis mengingatkan mitra restock sebelum persediaan beras menipis.</p>
+                </div>
+                <span class="text-[11px] font-bold text-sky-600 mt-4 border-t border-slate-100 pt-2">Target: Model XGBoost/Prophet</span>
+              </div>
+              <div class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between shadow-sm">
+                <div>
+                  <span class="text-[10px] font-bold text-sky-700 uppercase bg-sky-50 px-2 py-0.5 rounded">FASE 3: MULTI-CHANNEL</span>
+                  <h4 class="text-sm font-bold text-slate-900 mt-2 mb-2">Ekspansi WhatsApp Cloud API</h4>
+                  <p class="text-xs text-slate-600 leading-relaxed">Menghubungkan alur yang sama ke WhatsApp Business API resmi untuk menjangkau pangsa mitra pedagang yang lebih luas.</p>
+                </div>
+                <span class="text-[11px] font-bold text-sky-600 mt-4 border-t border-slate-100 pt-2">Target: Adopsi Naik 3x Lipat</span>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2">
+              Transformasi bertahap dari chatbot tekstual menuju asisten logistik otonom.
+            </div>
+          </div>
+          `,
+          // Slide 13: Closing
+          `
+          <div class="h-full w-full bg-[#090d16] text-slate-100 p-16 flex flex-col justify-center items-center text-center relative overflow-hidden">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs uppercase font-extrabold tracking-wider px-3 py-1 rounded bg-sky-500/15 text-sky-400 border border-sky-500/30">TECHNICAL PORTFOLIO SUMMARY</span>
+              <span class="text-xs text-slate-400 font-medium">• SIAP BERKOLABORASI &amp; MENGAKSELERASI BISNIS</span>
+            </div>
+            <h1 class="text-3xl font-extrabold text-white max-w-3xl leading-tight mb-4">
+              Siap Menghadirkan Dampak Nyata Melalui Data &amp; Automasi AI
+            </h1>
+            <p class="text-sm text-slate-300 max-w-2xl leading-relaxed mb-8">
+              Berpengalaman merancang arsitektur <i>Conversational AI</i> transaksional, orkestrasi microservice API terdistribusi, serta analitik data skala besar untuk instansi pemerintah dan BUMN logistik.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+              <div class="bg-slate-900 px-5 py-3 rounded-xl border border-slate-800 text-left">
+                <span class="text-[10px] text-slate-400 uppercase font-bold block">Email Profesional</span>
+                <span class="text-xs font-bold text-slate-200">saddammaularizal@gmail.com</span>
+              </div>
+              <div class="bg-slate-900 px-5 py-3 rounded-xl border border-slate-800 text-left">
+                <span class="text-[10px] text-slate-400 uppercase font-bold block">WhatsApp</span>
+                <span class="text-xs font-bold text-emerald-400">+62 878-5075-9362</span>
+              </div>
+              <div class="bg-slate-900 px-5 py-3 rounded-xl border border-slate-800 text-left">
+                <span class="text-[10px] text-slate-400 uppercase font-bold block">Live Web Demo</span>
+                <span class="text-xs font-bold text-sky-400">muhammadsaddamprojectberas.tiiny.site</span>
+              </div>
+            </div>
+          </div>
+          `
+        ]
+      }
+    };
+
+    /* -------------------------------------------------------------
+       STATE MANAGEMENT & CONTROLLERS
+       ------------------------------------------------------------- */
+    let currentDeckKey = 'scct';
+    let currentSlideIndex = 0;
+
+    // Slide Deck Modal Handlers
+    function openDeckModal(deckKey) {
+      currentDeckKey = deckKey;
+      currentSlideIndex = 0;
+
+      const deck = PROJECT_DECKS[deckKey];
+      document.getElementById('modalDeckTitle').innerText = deck.title;
+      renderCurrentSlide();
+      
+      const modal = document.getElementById('deckModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+
+      fitSlideStage();
+      window.addEventListener('resize', fitSlideStage);
+      window.addEventListener('keydown', handleDeckKeyboard);
+    }
+
+    function closeDeckModal() {
+      const modal = document.getElementById('deckModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      window.removeEventListener('resize', fitSlideStage);
+      window.removeEventListener('keydown', handleDeckKeyboard);
+    }
+
+    function renderCurrentSlide() {
+      const deck = PROJECT_DECKS[currentDeckKey];
+      const totalSlides = deck.slides.length;
+      document.getElementById('slideIndicator').innerText = `Slide ${currentSlideIndex + 1} / ${totalSlides}`;
+      const mount = document.getElementById('activeSlideMount');
+      mount.innerHTML = deck.slides[currentSlideIndex];
+    }
+
+    function nextSlide() {
+      const deck = PROJECT_DECKS[currentDeckKey];
+      if (currentSlideIndex < deck.slides.length - 1) {
+        currentSlideIndex++;
+        renderCurrentSlide();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlideIndex > 0) {
+        currentSlideIndex--;
+        renderCurrentSlide();
+      }
+    }
+
+    function handleDeckKeyboard(e) {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        prevSlide();
+      } else if (e.key === 'Escape') {
+        closeDeckModal();
+      }
+    }
+
+    function fitSlideStage() {
+      const viewport = document.getElementById('deckViewport');
+      const stage = document.getElementById('deckStageContainer');
+      if (!viewport || !stage) return;
+
+      const vw = viewport.clientWidth - 40;
+      const vh = viewport.clientHeight - 40;
+
+      const scaleW = vw / 1280;
+      const scaleH = vh / 720;
+      const finalScale = Math.min(scaleW, scaleH, 1.05);
+
+      stage.style.transform = `scale(${Math.max(finalScale, 0.45)})`;
+    }
+
+    // Direct PDF Exporter
+    async function triggerDirectPdfDownload(deckKey) {
+      openDeckModal(deckKey);
+      await downloadCurrentDeckPdf();
+    }
+
+    async function downloadCurrentDeckPdf() {
+      const btn = document.getElementById('deckPdfExportBtn');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Merender PDF...`;
+      btn.style.pointerEvents = 'none';
+
+      const deck = PROJECT_DECKS[currentDeckKey];
+      const total = deck.slides.length;
+
+      let tempPrintContainer = document.getElementById('printDeckContainer');
+      if (!tempPrintContainer) {
+        tempPrintContainer = document.createElement('div');
+        tempPrintContainer.id = 'printDeckContainer';
+        tempPrintContainer.style.position = 'fixed';
+        tempPrintContainer.style.left = '-9999px';
+        tempPrintContainer.style.top = '0';
+        tempPrintContainer.style.width = '1280px';
+        tempPrintContainer.style.zIndex = '-999';
+        document.body.appendChild(tempPrintContainer);
+      }
+
+      try {
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF({
+          orientation: 'landscape',
+          unit: 'px',
+          format: [1280, 720],
+          hotfixes: ['px_scaling']
+        });
+
+        for (let i = 0; i < total; i++) {
+          btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Slide ${i + 1}/${total}...`;
+          
+          tempPrintContainer.innerHTML = `
+            <div class="slide-canvas" style="width:1280px;height:720px;overflow:hidden;background:#ffffff;">
+              ${deck.slides[i]}
+            </div>
+          `;
+
+          const slideEl = tempPrintContainer.firstElementChild;
+          const canvas = await html2canvas(slideEl, {
+            scale: 1.3,
+            useCORS: true,
+            backgroundColor: null,
+            logging: false
+          });
+
+          const imgData = canvas.toDataURL('image/jpeg', 0.95);
+          if (i > 0) pdf.addPage([1280, 720], 'landscape');
+          pdf.addImage(imgData, 'JPEG', 0, 0, 1280, 720);
+        }
+
+        const fileName = currentDeckKey === 'scct' 
+          ? 'Portfolio_Muhammad_Saddam_SCCT_Control_Tower.pdf' 
+          : 'Portfolio_Muhammad_Saddam_Conversational_AI_Retail.pdf';
+
+        pdf.save(fileName);
+      } catch (err) {
+        console.error('PDF Export Error:', err);
+        window.print();
+      } finally {
+        tempPrintContainer.innerHTML = '';
+        btn.innerHTML = originalText;
+        btn.style.pointerEvents = 'auto';
+      }
+    }
+
+    /* -------------------------------------------------------------
+       INTERACTIVE SIMULATOR RUNTIME
+       ------------------------------------------------------------- */
+    function openInteractiveSim(simType) {
+      const modal = document.getElementById('simModal');
+      const tgWrap = document.getElementById('tgSimWrapper');
+      const scctWrap = document.getElementById('scctSimWrapper');
+      const title = document.getElementById('simModalTitle');
+      const sub = document.getElementById('simModalSubtitle');
+
+      tgWrap.classList.add('hidden');
+      scctWrap.classList.add('hidden');
+
+      if (simType === 'telegram') {
+        title.innerText = "Telegram Conversational AI Client";
+        sub.innerText = "Simulasi Interaksi Langsung Multi-Turn & NLP Entity Extraction";
+        tgWrap.classList.remove('hidden');
+        tgWrap.classList.add('flex');
+      } else if (simType === 'scct-map') {
+        title.innerText = "National SCCT Geospatial Control Tower";
+        sub.innerText = "Simulasi Pemetaan Kapasitas Makro Regional & Monitoring Stok";
+        scctWrap.classList.remove('hidden');
+        scctWrap.classList.add('flex');
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeInteractiveSim() {
+      const modal = document.getElementById('simModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function testQuickPromptInModal(text) {
+      openInteractiveSim('telegram');
+      sendQuickPrompt(text);
+    }
+
+    // Telegram Bot Simulation Engine
+    function sendQuickPrompt(text) {
+      document.getElementById('tgChatInput').value = text;
+      handleTelegramSend();
+    }
+
+    function handleTelegramSend() {
+      const input = document.getElementById('tgChatInput');
+      const msg = input.value.trim();
+      if (!msg) return;
+
+      appendUserBubble(msg);
+      input.value = '';
+
+      setTimeout(() => {
+        processBotResponse(msg);
+      }, 400);
+    }
+
+    function appendUserBubble(text) {
+      const logs = document.getElementById('tgChatLogs');
+      const bubble = document.createElement('div');
+      bubble.className = "tg-bubble-user p-2.5 max-w-[80%] ml-auto text-right shadow-sm text-xs";
+      bubble.innerText = text;
+      logs.appendChild(bubble);
+      logs.scrollTop = logs.scrollHeight;
+    }
+
+    function appendBotBubble(html) {
+      const logs = document.getElementById('tgChatLogs');
+      const bubble = document.createElement('div');
+      bubble.className = "tg-bubble-bot p-3 max-w-[85%] space-y-1 shadow-sm text-xs leading-relaxed";
+      bubble.innerHTML = html;
+      logs.appendChild(bubble);
+      logs.scrollTop = logs.scrollHeight;
+    }
+
+    function processBotResponse(query) {
+      const q = query.toLowerCase();
+
+      if (q.includes('katalog')) {
+        appendBotBubble(`
+          <b class="text-white">Halo Mitra 🌾</b><br>
+          Berikut daftar produk yang tersedia:<br><br>
+          * <b>Beras SPHP 5 Kg</b><br>
+          Harga Resmi: <b>Rp 62.500</b>
+        `);
+      } else if (q.includes('keranjang')) {
+        appendBotBubble(`
+          <b class="text-white">Halo Mitra 👋 Berikut isi keranjang Anda:</b><br><br>
+          📦 Produk: <b>Beras SPHP 5 Kg</b><br>
+          🔢 Jumlah: <b>200 Pack (1.000 Kg)</b><br>
+          💰 Total Harga: <b>Rp 12.500.000</b><br><br>
+          <i>Perintah cepat edit:</i> <code>Ubah &lt;qty&gt;</code>, <code>Tambah &lt;qty&gt;</code>, atau ketik <b>"Checkout"</b>.
+        `);
+      } else if (q.includes('50kg') || q.includes('lapor')) {
+        appendBotBubble(`
+          <b class="text-emerald-400">✅ Konfirmasi Laporan Penjualan (NLP Extracted)</b><br>
+          📦 Barang: <b>10 Pack (50kg)</b><br>
+          🏷️ Harga: <b>Rp61.000 / pack</b><br>
+          👥 Pembeli: <b>39 Orang</b><br>
+          🧾 No. Invoice: <code>INV-23c8b116-dc18d9f-live</code><br><br>
+          Ketik <b>"Ya"</b> untuk kirim laporan ke sistem.
+        `);
+      } else if (q === 'ya') {
+        appendBotBubble(`
+          🎉 <b>Laporan Berhasil Dikirim!</b><br>
+          Terima kasih, data transaksi mitra telah terarsip ke database PostgreSQL &amp; ClickHouse.
+        `);
+      } else if (q.includes('riwayat')) {
+        appendBotBubble(`
+          <b class="text-emerald-400">✅ Riwayat Pesanan Selesai (total: 2)</b><br><br>
+          🧾 ID: <code>865fc824</code> • 25 Nov 2025<br>
+          📦 Beras SPHP 5 Kg (100 Pcs) • Total: <b>Rp6.250.000</b><br>
+          🟢 Status: <b>Sudah Sampai</b><br>
+          <hr class="border-slate-700 my-1">
+          🧾 ID: <code>7874caff</code> • 10 Okt 2025<br>
+          📦 Beras SPHP 5 Kg (23 Pcs) • Total: <b>Rp1.437.500</b><br>
+          🟢 Status: <b>Sampai pada Mitra</b>
+        `);
+      } else {
+        appendBotBubble(`
+          <b>Asisten Virtual Bulog:</b><br>
+          Permintaan: <i>"${query}"</i> telah diterima oleh Classifier Intent. Silakan coba: <code>"cek katalog"</code>, <code>"cek keranjang saya"</code>, atau <code>"Terjual 50kg ke 39 orang dengan harga 61000"</code>.
+        `);
+      }
+    }
+
+    function resetTelegramChat() {
+      const logs = document.getElementById('tgChatLogs');
+      logs.innerHTML = `
+        <div class="tg-bubble-bot p-3 max-w-[85%]">
+          <p class="font-bold text-sky-400 mb-1">Halo! Chat telah direset 👋</p>
+          <p class="text-slate-300">Silakan pilih menu cepat pengujian:</p>
+          <div class="mt-2 space-y-1">
+            <button onclick="sendQuickPrompt('cek katalog')" class="block w-full text-left bg-slate-800/80 hover:bg-slate-700 text-sky-300 p-1.5 rounded text-[11px] border border-slate-700">1. "cek katalog"</button>
+            <button onclick="sendQuickPrompt('Cek keranjang saya')" class="block w-full text-left bg-slate-800/80 hover:bg-slate-700 text-sky-300 p-1.5 rounded text-[11px] border border-slate-700">2. "Cek keranjang saya"</button>
+            <button onclick="sendQuickPrompt('Terjual 50kg ke 39 orang dengan harga 61000')" class="block w-full text-left bg-slate-800/80 hover:bg-slate-700 text-emerald-300 p-1.5 rounded text-[11px] border border-slate-700">3. "Terjual 50kg ke 39 orang dengan harga 61000"</button>
+          </div>
+        </div>
+      `;
+    }
+
+    // SCCT Map Inspector Interactive Logic
+    function inspectRegion(name, util, stock, cap, status) {
+      // Update quick preview in project card
+      const qName = document.getElementById('quickRegName');
+      const qUtil = document.getElementById('quickRegUtil');
+      const qStat = document.getElementById('quickRegStatus');
+      if (qName) qName.innerText = name + " (Macro Region)";
+      if (qUtil) qUtil.innerText = util;
+      if (qStat) qStat.innerText = status;
+
+      // Update full simulator modal
+      const sName = document.getElementById('simRegName');
+      const sUtil = document.getElementById('simRegUtil');
+      const sStock = document.getElementById('simRegStock');
+      const sStat = document.getElementById('simRegStatus');
+
+      if (sName) sName.innerText = name + " (Macro Region)";
+      if (sUtil) sUtil.innerText = util;
+      if (sStock) sStock.innerText = stock;
+      if (sStat) {
+        sStat.innerText = status;
+        if (status.includes('Tinggi')) {
+          sStat.className = "text-xs px-2.5 py-1 rounded bg-rose-950 text-rose-300 border border-rose-800 font-semibold";
+        } else if (status.includes('Sedang')) {
+          sStat.className = "text-xs px-2.5 py-1 rounded bg-amber-950 text-amber-300 border border-amber-800 font-semibold";
+        } else {
+          sStat.className = "text-xs px-2.5 py-1 rounded bg-sky-950 text-sky-300 border border-sky-800 font-semibold";
+        }
+      }
+    }
+  </script>
+</body>
+</html>
