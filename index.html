@@ -292,6 +292,10 @@
               <i class="fa-solid fa-water"></i>
               <span>Lihat Proyek</span>
             </a>
+            <a href="https://bni-griya-assistant.vercel.app" target="_blank" class="px-4 py-3.5 rounded-xl bg-[#F15A23]/15 hover:bg-[#F15A23]/25 text-amber-200 border border-[#F15A23]/45 font-mono font-bold text-xs flex items-center gap-2 transition">
+              <span>Live BNI Griya AI</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-[#FF8A5C]"></i>
+            </a>
             <a href="https://projectscct.tiiny.site" target="_blank" class="px-4 py-3.5 rounded-xl bg-[#062C43]/90 hover:bg-[#093E5E] text-sky-200 border border-sky-400/30 font-mono font-semibold text-xs flex items-center gap-2 transition">
               <span>Live Web SCCT</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-amber-300"></i>
@@ -314,7 +318,7 @@
             <div class="hydro-card p-3.5 rounded-2xl">
               <span class="font-mono text-[10px] text-rose-300 uppercase block">AI &amp; Chatbot</span>
               <p class="font-mono text-2xl font-extrabold text-white mt-0.5">
-                <span class="counter" data-target="3" data-decimals="0">3</span><span class="text-rose-300 text-sm">+</span><span class="text-sky-200 text-xs ml-1">Sistem</span>
+                <span class="counter" data-target="4" data-decimals="0">4</span><span class="text-rose-300 text-sm">+</span><span class="text-sky-200 text-xs ml-1">Sistem</span>
               </p>
               <span class="text-[11px] text-sky-200/75 block mt-0.5">AI Agent &amp; Bot</span>
             </div>
@@ -346,7 +350,7 @@
                 <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
                 <span class="font-mono text-xs text-sky-200 ml-1.5 font-bold">saddam@showcase:~</span>
               </div>
-              <span class="font-mono text-[10px] px-2.5 py-0.5 rounded-full bg-emerald-400/15 text-emerald-300 border border-emerald-400/30 font-bold shrink-0">4 PROYEK</span>
+              <span class="font-mono text-[10px] px-2.5 py-0.5 rounded-full bg-emerald-400/15 text-emerald-300 border border-emerald-400/30 font-bold shrink-0">5 PROYEK</span>
             </div>
 
             <!-- 4 Flagship Project Tabs (2x2 clean grid, zero overflow/overlap) -->
@@ -355,7 +359,7 @@
                 1. Dashboard BI
               </button>
               <button onclick="switchPipelineTab('ai')" id="tabBtn-ai" class="py-2 px-3 rounded-lg text-center font-medium text-sky-200/80 hover:text-white hover:bg-[#073654] transition">
-                2. AI Agent &amp; Bot
+                2. BNI Griya &amp; AI Bot
               </button>
               <button onclick="switchPipelineTab('scct')" id="tabBtn-scct" class="py-2 px-3 rounded-lg text-center font-medium text-sky-200/80 hover:text-white hover:bg-[#073654] transition">
                 3. Supply Chain BI
@@ -400,21 +404,21 @@
               <!-- TAB 2: AI AGENT & CHATBOT -->
               <div id="pipeTab-ai" class="space-y-3.5 hidden">
                 <div class="bg-[#06283E] p-3 rounded-xl border border-sky-400/20 space-y-1">
-                  <span class="text-[10px] text-sky-300 block">USER NATURAL LANGUAGE INPUT:</span>
-                  <p class="text-amber-300 text-xs">"Berapa realisasi pendapatan daerah di Maluku pada Oktober 2026?"</p>
+                  <span class="text-[10px] text-[#FFB08F] block font-bold">PROYEK 01 · BNI GRIYA SMART KPR + FISCAL/RETAIL AI</span>
+                  <p class="text-amber-300 text-xs">"Gaji 15 juta umur 30 BUMN, Take Over sisa 500 juta bunga 12,5% tenor 15 tahun"</p>
                 </div>
                 <div class="bg-[#06283E] p-3 rounded-xl border border-emerald-400/25 text-[11px]">
-                  <span class="text-[10px] text-emerald-300 block font-bold mb-1">DIFY MULTI-AGENT PLANNER &amp; ROUTER:</span>
+                  <span class="text-[10px] text-emerald-300 block font-bold mb-1">NLU ENTITY EXTRACTOR &amp; BANKING/SQL ENGINE:</span>
                   <pre class="text-sky-100 leading-relaxed whitespace-pre-wrap break-words text-[10.5px]">{
-  "domain": "FISCAL_APBD_DUAL_SCOPE",
-  "wilayah": ["Provinsi Maluku", "Provinsi Maluku Utara"],
-  "account_filter": "kode_akun_level_1 = '4'",
-  "time_mode": "YTD_CUMULATIVE (bulan = 10)"
+  "intent": "take_over",
+  "gaji_bersih": 15000000,
+  "plafon": 500000000,
+  "bunga_bni": "5.25% Fixed 3 Thn (hemat Rp2,14 Jt/bln)"
 }</pre>
                 </div>
                 <div class="pt-1 border-t border-sky-400/20 flex justify-between text-[11px] text-amber-300">
-                  <span>✓ Chatbot Pendamping Dashboard &amp; Bot Mitra</span>
-                  <span class="text-sky-300/70">Dify AI + n8n</span>
+                  <span>✓ Konfigurator Hybrid, Dify Multi-Agent, &amp; n8n</span>
+                  <span class="text-sky-300/70">4+ Sistem AI</span>
                 </div>
               </div>
 
@@ -517,20 +521,124 @@
             Proyek Unggulan
           </h2>
         </div>
-        <p class="text-sm text-sky-200/80 max-w-md leading-relaxed">Empat sistem data &amp; AI untuk pemerintahan, BUMN logistik, dan riset statistik. Setiap proyek bisa dicoba lewat simulator atau dibuka sebagai slide presentasi.</p>
+        <p class="text-sm text-sky-200/80 max-w-md leading-relaxed">Lima proyek data, AI, &amp; perbankan untuk layanan KPR, pemerintahan, BUMN logistik, dan riset statistik. Bisa dicoba lewat simulator, dibuka live web-nya, atau diunduh slide presentasinya.</p>
       </div>
 
       <div class="space-y-16">
 
         <!-- ========================================================================================
-             PROYEK 01: ENTERPRISE FISCAL & GOVERNANCE AI ASSISTANT + EXECUTIVE DASHBOARD
+             PROYEK 01: BNI GRIYA SMART KPR ASSISTANT (LIVE BANKING AI MOCK-UP)
              ======================================================================================== -->
-        <div class="hydro-card rounded-3xl p-7 sm:p-10 reveal-up border-2 border-amber-400/35">
+        <div class="hydro-card rounded-3xl p-7 sm:p-10 reveal-up border-2 border-[#F15A23]/45">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <!-- Left Narrative (6 Cols) -->
+            <div class="lg:col-span-6 space-y-5">
+              <div class="flex flex-wrap items-center gap-2.5">
+                <span class="font-mono text-xs font-extrabold px-3 py-1 rounded-lg bg-[#F15A23] text-white">PROYEK 01</span>
+                <span class="font-mono text-xs px-2.5 py-1 rounded-lg bg-[#005E6A]/45 text-teal-200 border border-teal-400/35">BANKING DOMAIN · KPR AI</span>
+                <span class="font-mono text-[10.5px] px-2 py-0.5 rounded bg-amber-400/15 text-amber-200 border border-amber-400/30">Interactive Mock-up (Non-Resmi)</span>
+              </div>
+
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                BNI Griya Smart KPR Assistant · Konfigurator Hybrid &amp; Chatbot Terpadu
+              </h3>
+
+              <p class="text-sm sm:text-base text-sky-100/90 leading-relaxed">
+                Studi kasus <strong class="text-white">Conversational Banking &amp; Loan Simulator</strong> berbasis informasi publik layanan KPR BNI Griya. Menggabungkan <strong class="text-white">5 kartu solusi utama</strong>, form input angka presisi + slider, mesin anuitas &amp; DSR real-time, tabel angsuran tahunan terpaginasi, serta asisten AI multi-intent berbahasa Indonesia.
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 py-4 border-y border-sky-400/20 font-mono">
+                <div>
+                  <span class="text-lg sm:text-xl font-extrabold text-[#FFB08F] block">5 Solusi</span>
+                  <span class="text-[11px] text-sky-300/80">Beli, RAB, Take Over, Cermat</span>
+                </div>
+                <div class="sm:border-l border-sky-400/20 sm:pl-4">
+                  <span class="text-lg sm:text-xl font-extrabold text-white block">DSR + Capping</span>
+                  <span class="text-[11px] text-sky-300/80">Usia 55/65 &amp; Tiering SRH -1%</span>
+                </div>
+                <div class="sm:border-l border-sky-400/20 sm:pl-4">
+                  <span class="text-lg sm:text-xl font-extrabold text-emerald-300 block">Zero API</span>
+                  <span class="text-[11px] text-sky-300/80">100% Client-Side Engine</span>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-3 pt-1">
+                <a href="https://bni-griya-assistant.vercel.app" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-[#F15A23] hover:bg-[#D94B18] text-white font-extrabold text-xs flex items-center gap-2 transition shadow-lg shadow-[#F15A23]/25">
+                  <span>Buka Live Web BNI Griya AI</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+                </a>
+                <button onclick="openDeckModal('bnigriya')" class="px-4 py-3 rounded-xl bg-[#041C2C] hover:bg-[#073654] text-white border border-sky-400/30 font-semibold text-xs flex items-center gap-2 transition">
+                  <i class="fa-solid fa-tv text-[#FFB08F]"></i>
+                  <span>Slide Presentasi (4 Slide)</span>
+                </button>
+                <button onclick="triggerDirectPdfDownload('bnigriya')" class="px-3.5 py-3 rounded-xl bg-[#041C2C]/80 hover:bg-rose-950 text-rose-300 border border-rose-400/30 font-mono text-xs flex items-center gap-1.5 transition">
+                  <i class="fa-solid fa-file-pdf"></i>
+                  <span>PDF</span>
+                </button>
+              </div>
+              <p class="text-[11px] font-mono text-sky-300/75">
+                Catatan: Aplikasi portofolio ini hanya mock-up interaktif dan tidak terhubung ke sistem maupun alur proses resmi Bank BNI.
+              </p>
+            </div>
+
+            <!-- Right Interactive Banking Mini-Preview (6 Cols) -->
+            <div class="lg:col-span-6">
+              <div class="bg-[#031726] rounded-2xl border border-teal-400/30 overflow-hidden shadow-2xl">
+                <div class="bg-[#00424B] px-5 py-3.5 flex items-center justify-between border-b border-teal-400/25">
+                  <div class="flex items-center gap-2.5">
+                    <span class="px-2 py-0.5 rounded bg-white text-[#005E6A] font-extrabold text-[11px]">BNI</span>
+                    <span class="font-bold text-white text-xs">Smart KPR Assistant Preview</span>
+                  </div>
+                  <a href="https://bni-griya-assistant.vercel.app" target="_blank" rel="noopener noreferrer" class="font-mono text-[11px] text-[#FFB08F] hover:underline font-bold">
+                    Buka Full App &rarr;
+                  </a>
+                </div>
+
+                <div class="p-5 space-y-4 text-xs">
+                  <!-- Quick Mode Switcher inside Portfolio Card -->
+                  <div class="grid grid-cols-3 gap-2 font-mono text-[11px]">
+                    <button type="button" onclick="switchBniPreview('beli')" id="bniPrevBtn-beli" class="py-2 px-2 rounded-xl bg-[#F15A23] text-white font-bold transition text-center">Pembelian</button>
+                    <button type="button" onclick="switchBniPreview('takeover')" id="bniPrevBtn-takeover" class="py-2 px-2 rounded-xl bg-[#052338] text-sky-200 hover:text-white border border-sky-400/20 transition text-center">Take Over</button>
+                    <button type="button" onclick="switchBniPreview('cermat')" id="bniPrevBtn-cermat" class="py-2 px-2 rounded-xl bg-[#052338] text-sky-200 hover:text-white border border-sky-400/20 transition text-center">KPR Cermat</button>
+                  </div>
+
+                  <div class="bg-[#052338] border border-sky-400/20 rounded-xl p-3.5 space-y-2">
+                    <span id="bniPrevTitle" class="font-bold text-amber-300 block">Preset: Pembelian Rumah Rp750 Jt · DP 15% · Tenor 20 Thn</span>
+                    <p id="bniPrevDesc" class="text-sky-100/90 leading-relaxed text-[11.5px]">
+                      Input hybrid (Gaji Rp15 Jt, Usia 29 thn BUMN) &rarr; klik <b>Kirim ke Chatbot &amp; Aktifkan Tabel</b>. Plafon Rp637,5 Jt, cicilan Fixed 5,25% sekitar <b>Rp4,29 Jt/bln</b> (DSR Aman 28,6%).
+                    </p>
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-3 font-mono text-[11px]">
+                    <div class="bg-[#06283E] p-3 rounded-xl border border-teal-400/25">
+                      <span class="text-teal-300 text-[10px] block">ESTIMASI CICILAN</span>
+                      <strong id="bniPrevPmt" class="text-base font-extrabold text-white">Rp4.295.775/bln</strong>
+                    </div>
+                    <div class="bg-[#06283E] p-3 rounded-xl border border-[#F15A23]/30">
+                      <span class="text-[#FFB08F] text-[10px] block">HIGHLIGHT MESIN</span>
+                      <strong id="bniPrevBadge" class="text-sm font-extrabold text-emerald-300">DSR 28,6% · Lolos</strong>
+                    </div>
+                  </div>
+
+                  <a href="https://bni-griya-assistant.vercel.app" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-white hover:bg-teal-50 text-[#005E6A] font-extrabold text-xs flex items-center justify-center gap-2 transition">
+                    <span>Coba Simulasi Lengkap, Input Langsung &amp; Chatbot di Vercel</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================================================================
+             PROYEK 02: ENTERPRISE FISCAL & GOVERNANCE AI ASSISTANT + EXECUTIVE DASHBOARD
+             ======================================================================================== -->
+        <div class="hydro-card rounded-3xl p-7 sm:p-10 reveal-up border border-sky-400/30">
           <!-- Top Project Header -->
           <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-sky-400/20">
             <div class="space-y-2">
               <div class="flex flex-wrap items-center gap-2.5">
-                <span class="font-mono text-xs font-extrabold px-3 py-1 rounded-lg bg-amber-400 text-slate-950">PROYEK 01</span>
+                <span class="font-mono text-xs font-extrabold px-3 py-1 rounded-lg bg-amber-400 text-slate-950">PROYEK 02</span>
                 <span class="font-mono text-xs px-3 py-1 rounded-lg bg-sky-400/15 text-sky-300 border border-sky-400/30">Data Enthusiast &middot; AI &amp; BI</span>
               </div>
               <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
@@ -983,7 +1091,7 @@
         </div>
 
         <!-- ========================================================================================
-             PROYEK 02: SUPPLY CHAIN CONTROL TOWER (SCCT) & CONVERSATIONAL BI
+             PROYEK 03: SUPPLY CHAIN CONTROL TOWER (SCCT) & CONVERSATIONAL BI
              ======================================================================================== -->
         <div class="hydro-card rounded-3xl p-7 sm:p-10 reveal-up">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -991,7 +1099,7 @@
             <!-- Left Narrative (6 Cols) -->
             <div class="lg:col-span-6 space-y-5">
               <div class="flex items-center gap-3">
-                <span class="font-mono text-xs font-extrabold px-3 py-1 rounded-lg bg-sky-400/20 text-sky-300 border border-sky-400/35">PROYEK 02</span>
+                <span class="font-mono text-xs font-extrabold px-3 py-1 rounded-lg bg-sky-400/20 text-sky-300 border border-sky-400/35">PROYEK 03</span>
                 <span class="font-mono text-xs text-sky-200/75">NATIONAL SUPPLY CHAIN BI</span>
               </div>
 
@@ -1098,7 +1206,7 @@
         </div>
 
         <!-- ========================================================================================
-             PROYEK 03: ENTERPRISE CONVERSATIONAL AI & RETAIL BOT
+             PROYEK 04: ENTERPRISE CONVERSATIONAL AI & RETAIL BOT
              ======================================================================================== -->
         <div class="hydro-card rounded-3xl p-7 sm:p-10 reveal-up">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -1106,7 +1214,7 @@
             <!-- Left Narrative (6 Cols) -->
             <div class="lg:col-span-6 space-y-5">
               <div class="flex items-center gap-3">
-                <span class="font-mono text-xs font-extrabold px-3 py-1 rounded-lg bg-rose-400/20 text-rose-300 border border-rose-400/35">PROYEK 03</span>
+                <span class="font-mono text-xs font-extrabold px-3 py-1 rounded-lg bg-rose-400/20 text-rose-300 border border-rose-400/35">PROYEK 04</span>
                 <span class="font-mono text-xs text-sky-200/75">NLP TRANSACTIONAL BOT</span>
               </div>
 
@@ -1198,7 +1306,7 @@
         </div>
 
         <!-- ========================================================================================
-             PROYEK 04: JAVA UNDERDEVELOPMENT CLUSTERING (SKRIPSI STATISTIKA UNDIP)
+             PROYEK 05: JAVA UNDERDEVELOPMENT CLUSTERING (SKRIPSI STATISTIKA UNDIP)
              ======================================================================================== -->
         <div class="hydro-card rounded-3xl p-7 sm:p-10 reveal-up">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -1206,7 +1314,7 @@
             <!-- Left Narrative (6 Cols) -->
             <div class="lg:col-span-6 space-y-5">
               <div class="flex items-center gap-3">
-                <span class="font-mono text-xs font-extrabold px-3 py-1 rounded-lg bg-emerald-400/20 text-emerald-300 border border-emerald-400/35">PROYEK 04</span>
+                <span class="font-mono text-xs font-extrabold px-3 py-1 rounded-lg bg-emerald-400/20 text-emerald-300 border border-emerald-400/35">PROYEK 05</span>
                 <span class="font-mono text-xs text-sky-200/75">STATISTICAL ML &amp; REGIONAL POLICY</span>
               </div>
 
@@ -3602,6 +3710,322 @@
           `
         ]
       }
+      ,
+      fiscal: {
+        title: "Enterprise Fiscal & Governance AI Assistant + Executive APBD Dashboard",
+        slides: [
+          // Slide 1: Cover
+          `
+          <div class="h-full w-full bg-[#041C2C] text-slate-100 p-16 flex flex-col justify-center relative overflow-hidden">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-xs uppercase font-extrabold tracking-wider px-3 py-1 rounded bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">END-TO-END CONVERSATIONAL BI &amp; EXECUTIVE DASHBOARD</span>
+              <span class="text-xs text-slate-400 font-medium">• GOVTECH &amp; FISCAL INTELLIGENCE</span>
+            </div>
+            <h1 class="text-4xl font-extrabold text-white max-w-4xl leading-tight mb-4">
+              Enterprise Fiscal &amp; Governance AI Assistant + Executive Analytics Dashboard
+            </h1>
+            <p class="text-base text-slate-300 max-w-3xl leading-relaxed mb-8">
+              Platform analitik terpadu berbasis Multi-Agent LLM (Dify AI) dan database ClickHouse yang menyatukan eksplorasi bahasa alami dengan dashboard monitoring APBD, kepatuhan regulasi Perda, program prioritas SPM, serta sentimen publik.
+            </p>
+            <div class="grid grid-cols-3 gap-6 bg-[#072A40] p-6 rounded-2xl border border-cyan-500/20 max-w-3xl">
+              <div>
+                <span class="text-[10px] text-cyan-300 uppercase font-bold tracking-wider block">Pengembang</span>
+                <span class="text-sm font-bold text-white">Muhammad Saddam M. R. Alyudin</span>
+              </div>
+              <div class="border-l border-cyan-500/20 pl-6">
+                <span class="text-[10px] text-cyan-300 uppercase font-bold tracking-wider block">Peran Utama</span>
+                <span class="text-sm font-bold text-amber-300">Data Enthusiast</span>
+              </div>
+              <div class="border-l border-cyan-500/20 pl-6">
+                <span class="text-[10px] text-cyan-300 uppercase font-bold tracking-wider block">Stack Pendukung</span>
+                <span class="text-sm font-medium text-slate-200">Dify AI, Apache Superset, ClickHouse, RAG</span>
+              </div>
+            </div>
+          </div>
+          `,
+          // Slide 2: Multi-Agent Pipeline Architecture
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-cyan-800 bg-cyan-100 px-3 py-1 rounded-md uppercase">Arsitektur Multi-Agent</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Sinergi AI Chatflow &amp; Executive Dashboard (Single Source of Truth)</h2>
+            </div>
+            <div class="grid grid-cols-4 gap-4 my-auto text-center">
+              <div class="bg-white p-5 rounded-xl border-2 border-cyan-500 shadow-sm space-y-2">
+                <span class="text-[10px] font-mono font-bold text-cyan-700 bg-cyan-50 px-2 py-0.5 rounded">STAGE 01</span>
+                <h4 class="text-sm font-bold text-slate-900">Intent &amp; Entity Parser</h4>
+                <p class="text-[11px] text-slate-600 leading-relaxed">Normalisasi typo, singkatan nama daerah, dimensi tahun/bulan, serta deteksi kebutuhan kumulatif (YTD) vs bulanan mandiri (MoM).</p>
+              </div>
+              <div class="bg-white p-5 rounded-xl border-2 border-amber-500 shadow-sm space-y-2">
+                <span class="text-[10px] font-mono font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded">STAGE 02</span>
+                <h4 class="text-sm font-bold text-slate-900">Domain Semantic Router</h4>
+                <p class="text-[11px] text-slate-600 leading-relaxed">Mengarahkan kueri secara paralel ke domain Keuangan APBD, Tematik &amp; Perda, Registri Ormas, serta RAG Knowledge Base &amp; Sentimen Media.</p>
+              </div>
+              <div class="bg-white p-5 rounded-xl border-2 border-emerald-500 shadow-sm space-y-2">
+                <span class="text-[10px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">STAGE 03</span>
+                <h4 class="text-sm font-bold text-slate-900">SQL Query Runner</h4>
+                <p class="text-[11px] text-slate-600 leading-relaxed">Menjalankan multi-kueri analitik terstruktur pada data rekening anggaran Level 1 hingga Level 5 secara konsisten.</p>
+              </div>
+              <div class="bg-white p-5 rounded-xl border-2 border-indigo-500 shadow-sm space-y-2">
+                <span class="text-[10px] font-mono font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded">STAGE 04</span>
+                <h4 class="text-sm font-bold text-slate-900">Synthesizer &amp; MCP Chart</h4>
+                <p class="text-[11px] text-slate-600 leading-relaxed">Menyusun narasi eksekutif presisi 2 desimal, konteks tata kelola, tabel komparasi, dan grafik otomatis dengan Zero Technical Leakage.</p>
+              </div>
+            </div>
+            <div class="bg-cyan-950 text-cyan-100 p-4 rounded-xl flex items-center justify-between text-xs">
+              <span><b>Keunggulan Utama:</b> Definisi formula bisnis di AI Assistant 100% identik dengan metrik di Executive Analytics Dashboard.</span>
+              <span class="font-mono text-amber-300 font-bold">Zero-Hallucination Grounding</span>
+            </div>
+          </div>
+          `,
+          // Slide 3: Core Highlights
+          `
+          <div class="h-full w-full bg-white text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1 rounded-md uppercase">Logika Domain &amp; Analitik</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Empat Prinsip Utama pada Kueri Fiskal &amp; Regulasi</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-5 my-auto text-xs">
+              <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1.5">
+                <h4 class="font-bold text-slate-900 text-sm text-cyan-800">1. Disiplin Hierarki Akun (Level 1–5) &amp; Negasi Presisi</h4>
+                <p class="text-slate-600 leading-relaxed">Membedakan Kode Akun 4 (Pendapatan), 5 (Belanja), dan 6 (Pembiayaan), serta mendukung negasi presisi seperti belanja di luar belanja pegawai (<code>kode_akun_level_3 != '5.1.01'</code>).</p>
+              </div>
+              <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1.5">
+                <h4 class="font-bold text-slate-900 text-sm text-emerald-800">2. Manajemen Waktu: Kumulatif (YTD) vs Delta (MoM)</h4>
+                <p class="text-slate-600 leading-relaxed">Mencegah <i>double-counting</i> saldo kumulatif antarbulan dengan mengambil <code>max(bulan)</code> untuk YTD, serta agregasi selisih bulan <i>N - (N-1)</i> untuk capaian 1 bulan tunggal.</p>
+              </div>
+              <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1.5">
+                <h4 class="font-bold text-slate-900 text-sm text-amber-800">3. Pemisahan Lingkup Fiskal Dual-Scope &amp; Homonim</h4>
+                <p class="text-slate-600 leading-relaxed">Menjalankan 2 kueri terpisah untuk tingkat provinsi: <b>Pemerintah Provinsi (Pemprov)</b> vs <b>Konsolidasi Se-Provinsi (Pemprov + Kab/Kota)</b>, serta menjaga wilayah bernama mirip tampil berdampingan.</p>
+              </div>
+              <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1.5">
+                <h4 class="font-bold text-slate-900 text-sm text-indigo-800">4. Evaluasi Kepatuhan Dual-Status &amp; Zero-Leakage</h4>
+                <p class="text-slate-600 leading-relaxed">Menyandingkan <b>Status Regulasi Nasional (&le; 31 Des N-1)</b> dengan <b>Status Verifikasi Jadwal Sistem</b>, serta menyaring seluruh nama kolom SQL/JSON agar tidak bocor ke pengguna.</p>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2 flex justify-between">
+              <span>Standar Akuntansi Pemerintah Daerah (Permendagri)</span>
+              <span class="text-cyan-700 font-bold">Presisi Dua Desimal Eksak</span>
+            </div>
+          </div>
+          `,
+          // Slide 4: End-to-End Walkthrough Simulation
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-sky-800 bg-sky-100 px-3 py-1 rounded-md uppercase">Simulasi End-to-End</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Walkthrough: "Berapa realisasi pendapatan daerah di Maluku pada Oktober 2026?"</h2>
+            </div>
+            <div class="grid grid-cols-12 gap-5 my-auto items-stretch text-xs">
+              <div class="col-span-5 bg-slate-900 text-slate-100 p-4 rounded-xl font-mono text-[10.5px] space-y-2 flex flex-col justify-between">
+                <div>
+                  <span class="text-cyan-400 font-bold block mb-1">// STAGE 1: AUTONOMOUS PLANNER JSON</span>
+                  <pre class="text-emerald-300 whitespace-pre-wrap leading-relaxed">{
+  "rewritten_query": "Realisasi pendapatan APBD wilayah Maluku s.d. Okt 2026 (Pemprov & Konsolidasi)",
+  "sql_queries": [
+    "SELECT nama_daerah, SUM(realisasi_anggaran) FROM fact_realisasi_anggaran WHERE tahun=2026 AND bulan=10 AND kode_akun_level_1='4' AND nama_daerah ILIKE '%Maluku%' AND kategori_daerah='Provinsi'...",
+    "SELECT nama_provinsi, SUM(realisasi_anggaran) FROM fact_realisasi_anggaran WHERE tahun=2026 AND bulan=10 AND kode_akun_level_1='4' AND nama_provinsi ILIKE '%Maluku%' GROUP BY nama_provinsi;"
+  ]
+}</pre>
+                </div>
+                <span class="text-[10px] text-amber-300 block border-t border-slate-700 pt-2">✓ Dual-Scope + Disambiguasi Maluku &amp; Maluku Utara</span>
+              </div>
+              <div class="col-span-7 bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-3">
+                <span class="text-xs font-bold text-cyan-800 block">STAGE 2: EXECUTIVE SYNTHESIZER RESPONSE</span>
+                <table class="w-full text-left text-[11px] border border-slate-200">
+                  <thead class="bg-slate-100 text-slate-800">
+                    <tr><th class="p-2">Wilayah Provinsi</th><th class="p-2">Lingkup Pemerintahan</th><th class="p-2 text-right">Realisasi Pendapatan (Okt 2026)</th></tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-200">
+                    <tr><td class="p-2 font-semibold">Provinsi Maluku</td><td class="p-2">Pemerintah Provinsi (Pemprov)</td><td class="p-2 text-right font-bold text-cyan-700">Rp 2,72 Triliun</td></tr>
+                    <tr><td class="p-2 font-semibold">Provinsi Maluku</td><td class="p-2">Total Konsolidasi Se-Provinsi</td><td class="p-2 text-right font-bold text-emerald-700">Rp 10,40 Triliun</td></tr>
+                    <tr><td class="p-2 font-semibold">Provinsi Maluku Utara</td><td class="p-2">Pemerintah Provinsi (Pemprov)</td><td class="p-2 text-right font-bold text-cyan-700">Rp 3,15 Triliun</td></tr>
+                    <tr><td class="p-2 font-semibold">Provinsi Maluku Utara</td><td class="p-2">Total Konsolidasi Se-Provinsi</td><td class="p-2 text-right font-bold text-emerald-700">Rp 11,39 Triliun</td></tr>
+                  </tbody>
+                </table>
+                <p class="text-[11px] text-slate-600 leading-relaxed">
+                  Angka bersifat akumulatif (Jan–Okt 2026) mencakup PAD, Pendapatan Transfer, dan Lain-lain Pendapatan Sah. Provinsi Maluku dan Maluku Utara ditampilkan terpisah tanpa tercampur.
+                </p>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2 flex justify-between">
+              <span>Sumber: Sistem Informasi Pemerintahan Daerah (Data Ilustratif Portofolio)</span>
+              <span class="text-emerald-600 font-bold">Zero Technical Leakage Verified</span>
+            </div>
+          </div>
+          `,
+          // Slide 5: Dashboard Module 1 & 2 (Fiscal Overview & Governance Compliance)
+          `
+          <div class="h-full w-full bg-white text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-indigo-800 bg-indigo-100 px-3 py-1 rounded-md uppercase">Executive Analytics Dashboard</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Modul Kinerja Fiskal APBD &amp; Kepatuhan Regulasi Perda (Dual-Status)</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-6 my-auto text-xs">
+              <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+                <h4 class="font-bold text-slate-900">A. Kinerja Belanja Daerah (Data Ilustratif · Max 5 Baris)</h4>
+                <table class="w-full text-[11px] bg-white border border-slate-200">
+                  <thead class="bg-slate-900 text-white">
+                    <tr><th class="p-2">Wilayah &amp; Lingkup</th><th class="p-2 text-right">Pagu</th><th class="p-2 text-right">Realisasi</th><th class="p-2 text-right">Serapan</th></tr>
+                  </thead>
+                  <tbody class="divide-y">
+                    <tr><td class="p-2">Jawa Barat (Pemprov)</td><td class="p-2 text-right">Rp36,00 T</td><td class="p-2 text-right">Rp24,48 T</td><td class="p-2 text-right font-bold text-emerald-600">68,00%</td></tr>
+                    <tr><td class="p-2">Jawa Barat (Konsolidasi)</td><td class="p-2 text-right">Rp125,00 T</td><td class="p-2 text-right">Rp81,25 T</td><td class="p-2 text-right font-bold text-cyan-600">65,00%</td></tr>
+                    <tr><td class="p-2">Jawa Tengah (Pemprov)</td><td class="p-2 text-right">Rp24,00 T</td><td class="p-2 text-right">Rp16,56 T</td><td class="p-2 text-right font-bold text-emerald-600">69,00%</td></tr>
+                    <tr><td class="p-2">Maluku (Pemprov)</td><td class="p-2 text-right">Rp4,00 T</td><td class="p-2 text-right">Rp2,72 T</td><td class="p-2 text-right font-bold text-emerald-600">68,00%</td></tr>
+                    <tr><td class="p-2">Maluku Utara (Konsolidasi)</td><td class="p-2 text-right">Rp17,00 T</td><td class="p-2 text-right">Rp11,39 T</td><td class="p-2 text-right font-bold text-cyan-600">67,00%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+                <h4 class="font-bold text-slate-900">B. Kepatuhan Perda APBD 2026 (Sample Jawa &amp; Banten)</h4>
+                <table class="w-full text-[10.5px] bg-white border border-slate-200">
+                  <thead class="bg-slate-900 text-white">
+                    <tr><th class="p-1.5">Daerah</th><th class="p-1.5">Tgl Sah</th><th class="p-1.5">Status Regulasi</th><th class="p-1.5">Verifikasi Sistem</th></tr>
+                  </thead>
+                  <tbody class="divide-y">
+                    <tr><td class="p-1.5 font-semibold">Provinsi Jawa Barat</td><td class="p-1.5">30 Des 2025</td><td class="p-1.5 text-emerald-600 font-bold">Tepat Waktu</td><td class="p-1.5 text-rose-600">Tidak Tepat Waktu</td></tr>
+                    <tr><td class="p-1.5 font-semibold">Kab. Bandung</td><td class="p-1.5">28 Des 2025</td><td class="p-1.5 text-emerald-600 font-bold">Tepat Waktu</td><td class="p-1.5 text-rose-600">Tidak Tepat Waktu</td></tr>
+                    <tr><td class="p-1.5 font-semibold">Kota Bekasi</td><td class="p-1.5">31 Des 2025</td><td class="p-1.5 text-emerald-600 font-bold">Tepat Waktu</td><td class="p-1.5 text-rose-600">Tidak Tepat Waktu</td></tr>
+                    <tr><td class="p-1.5 font-semibold">Provinsi Jawa Tengah</td><td class="p-1.5">26 Des 2025</td><td class="p-1.5 text-emerald-600 font-bold">Tepat Waktu</td><td class="p-1.5 text-emerald-600">Tepat Waktu</td></tr>
+                    <tr><td class="p-1.5 font-semibold">Kota Semarang</td><td class="p-1.5">18 Jan 2026</td><td class="p-1.5 text-rose-600 font-bold">Terlambat</td><td class="p-1.5 text-emerald-600">Tepat Waktu</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-2 flex justify-between">
+              <span>Modul 3 mencakup Tracking SPM Pendidikan (71%), Kesehatan (68%), Inflasi 4K (72%), &amp; Kemiskinan Ekstrem (65%)</span>
+              <span class="text-indigo-700 font-bold">4 Modul Terintegrasi Penuh</span>
+            </div>
+          </div>
+          `
+        ]
+      }
+      ,
+      bnigriya: {
+        title: "BNI Griya Smart KPR Assistant · Konfigurator & Chatbot KPR Terpadu",
+        slides: [
+          `
+          <div class="h-full w-full bg-[#00424B] text-slate-100 p-14 flex flex-col justify-center relative overflow-hidden">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-xs uppercase font-extrabold tracking-wider px-3 py-1 rounded bg-[#F15A23]/20 text-[#FFB08F] border border-[#F15A23]/40">BANKING DOMAIN &amp; CONVERSATIONAL AI MOCK-UP</span>
+              <span class="text-xs text-teal-200 font-medium">• KPR BNI GRIYA SIMULATION</span>
+            </div>
+            <h1 class="text-4xl font-extrabold text-white max-w-4xl leading-tight mb-4">
+              BNI Griya Smart KPR Assistant: Konfigurator Hybrid &amp; Multi-Intent Chatbot
+            </h1>
+            <p class="text-base text-teal-100/90 max-w-3xl leading-relaxed mb-8">
+              Mock-up interaktif terpadu yang menyatukan kalkulator KPR (Pembelian, Pembangunan/RAB, Take Over, Refinancing/Multiguna, &amp; KPR Cermat) dengan asisten chat bahasa Indonesia tanpa ketergantungan API berbayar.
+            </p>
+            <div class="grid grid-cols-3 gap-6 bg-[#005E6A] p-6 rounded-2xl border border-white/15 max-w-3xl">
+              <div>
+                <span class="text-[10px] text-teal-200 uppercase font-bold tracking-wider block">Live Web Mock-up</span>
+                <span class="text-sm font-bold text-white">bni-griya-assistant.vercel.app</span>
+              </div>
+              <div class="border-l border-white/20 pl-6">
+                <span class="text-[10px] text-teal-200 uppercase font-bold tracking-wider block">Mesin Logika</span>
+                <span class="text-sm font-bold text-[#FFB08F]">Deterministik JS Engine</span>
+              </div>
+              <div class="border-l border-white/20 pl-6">
+                <span class="text-[10px] text-teal-200 uppercase font-bold tracking-wider block">Catatan Status</span>
+                <span class="text-sm font-medium text-teal-100">Hanya Mock-up (Non-Resmi)</span>
+              </div>
+            </div>
+          </div>
+          `,
+          `
+          <div class="h-full w-full bg-slate-50 text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-[#005E6A] bg-[#E7F4F6] px-3 py-1 rounded-md uppercase">Alur Pengalaman Pengguna</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Pemisahan Peran Jelas: Pilih Solusi &rarr; Konfigurator Hybrid &rarr; Kirim ke Chatbot</h2>
+            </div>
+            <div class="grid grid-cols-4 gap-4 my-auto text-center">
+              <div class="bg-white p-5 rounded-xl border-2 border-[#005E6A] shadow-sm space-y-2">
+                <span class="text-[10px] font-mono font-bold text-[#005E6A] bg-[#E7F4F6] px-2 py-0.5 rounded">TAHAP 01</span>
+                <h4 class="text-sm font-bold text-slate-900">5 Kartu Solusi</h4>
+                <p class="text-[11px] text-slate-600 leading-relaxed">Pembelian, Pembangunan, Take Over, Refinancing, &amp; KPR Cermat memuat preset ke panel konfigurator.</p>
+              </div>
+              <div class="bg-white p-5 rounded-xl border-2 border-[#F15A23] shadow-sm space-y-2">
+                <span class="text-[10px] font-mono font-bold text-[#D94B18] bg-[#FFF1EB] px-2 py-0.5 rounded">TAHAP 02</span>
+                <h4 class="text-sm font-bold text-slate-900">Input Hybrid &amp; Slider</h4>
+                <p class="text-[11px] text-slate-600 leading-relaxed">Ketik angka presisi atau geser slider (Gaji, Cicilan Lain, Usia, Harga/RAB, DP, Tenor, Bunga Asal, SRH).</p>
+              </div>
+              <div class="bg-white p-5 rounded-xl border-2 border-emerald-600 shadow-sm space-y-2">
+                <span class="text-[10px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">TAHAP 03</span>
+                <h4 class="text-sm font-bold text-slate-900">Konfirmasi Kirim</h4>
+                <p class="text-[11px] text-slate-600 leading-relaxed">Tombol Kirim memproses ringkasan ke Chatbot, mengaktifkan jadwal angsuran (5 baris/tab), &amp; tampilkan format ketik.</p>
+              </div>
+              <div class="bg-white p-5 rounded-xl border-2 border-slate-700 shadow-sm space-y-2">
+                <span class="text-[10px] font-mono font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded">TAHAP 04</span>
+                <h4 class="text-sm font-bold text-slate-900">NLU Multi-Intent Chat</h4>
+                <p class="text-[11px] text-slate-600 leading-relaxed">Tanya langsung via bahasa bebas untuk uji daya beli, perbandingan produk (Griya Gue/Multiguna/FLPP), &amp; dokumen.</p>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-3 flex justify-between">
+              <span>Dilengkapi Reset Input &amp; Tabel independen serta Logic JSON Inspector untuk recruiter</span>
+              <span class="text-[#005E6A] font-bold">100% Client-Side Deterministic Engine</span>
+            </div>
+          </div>
+          `,
+          `
+          <div class="h-full w-full bg-white text-slate-900 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-[#D94B18] bg-[#FFF1EB] px-3 py-1 rounded-md uppercase">Aturan Finansial &amp; Logika Kredit</span>
+              <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Implementasi Rumus Anuitas, DSR, Capping Tenor, &amp; KPR Cermat</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-6 my-auto text-xs">
+              <div class="bg-[#F4F8F9] p-5 rounded-xl border border-[#DCE9EC] space-y-2">
+                <h4 class="font-bold text-[#005E6A] text-sm">1. Anuitas &amp; Uji Penghasilan (DSR)</h4>
+                <ul class="space-y-1.5 text-slate-700">
+                  <li>• Perhitungan cicilan masa fixed vs estimasi floating tahunan secara deterministik.</li>
+                  <li>• Uji <b>Debt Service Ratio (DSR)</b> memperhitungkan cicilan kredit lain: Aman &le;40%, Batas Maks 50%.</li>
+                  <li>• Capping tenor otomatis: usia lunas maks <b>55 thn</b> (karyawan) / <b>65 thn</b> (wiraswasta &amp; profesional), serta cap produk (Multiguna/Ruko 10 thn, FLPP 20 thn, Renovasi/Take Over 25 thn, Rumah 30 thn).</li>
+                </ul>
+              </div>
+              <div class="bg-[#FFF1EB] p-5 rounded-xl border border-[#F15A23]/25 space-y-2">
+                <h4 class="font-bold text-[#D94B18] text-sm">2. Diskon Bunga KPR Cermat (SRH)</h4>
+                <table class="w-full text-[11px] bg-white rounded-lg overflow-hidden border border-[#F15A23]/20">
+                  <thead class="bg-[#005E6A] text-white"><tr><th class="p-2 text-left">Rasio SRH / Pokok</th><th class="p-2 text-right">Diskon p.a.</th></tr></thead>
+                  <tbody class="divide-y">
+                    <tr><td class="p-2">&lt; 10%</td><td class="p-2 text-right font-mono">0,00%</td></tr>
+                    <tr><td class="p-2">&ge; 10% s.d. &lt; 50%</td><td class="p-2 text-right font-mono font-bold">-0,50%</td></tr>
+                    <tr><td class="p-2">&gt; 50% s.d. &le; 100%</td><td class="p-2 text-right font-mono font-bold">-0,75%</td></tr>
+                    <tr><td class="p-2">&gt; 100%</td><td class="p-2 text-right font-mono font-bold text-[#D94B18]">-1,00%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-500 border-t border-slate-200 pt-3 flex justify-between">
+              <span>Guard otomatis: KPR Cermat &amp; Take Over menonaktifkan skema Subsidi FLPP agar patuh ketentuan produk</span>
+              <span class="text-[#D94B18] font-bold">QA Teruji 100% di Node.js</span>
+            </div>
+          </div>
+          `,
+          `
+          <div class="h-full w-full bg-[#041C2C] text-slate-100 p-12 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-emerald-300 bg-emerald-500/15 px-3 py-1 rounded-md uppercase border border-emerald-500/30">Integrasi Portofolio &amp; Batasan</span>
+              <h2 class="text-2xl font-extrabold text-white mt-2">Transparansi Mock-up Non-Resmi &amp; Panduan Format Chatbot</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-6 my-auto text-xs">
+              <div class="bg-[#072A40] p-5 rounded-xl border border-sky-400/20 space-y-2.5">
+                <h4 class="font-bold text-[#FFB08F] text-sm">Catatan Sistem &amp; Kredensial</h4>
+                <p class="text-slate-300 leading-relaxed">Halaman <b>BNI Griya Smart KPR Assistant</b> merupakan <b>mock-up portofolio mandiri</b> dan tidak terhubung dengan backend, database nasabah, maupun alur persetujuan sistem resmi Bank BNI.</p>
+                <p class="text-slate-300 leading-relaxed">Tautan e-Form pada aplikasi hanya berupa referensi navigasi ke portal informasi publik BNI.</p>
+              </div>
+              <div class="bg-[#072A40] p-5 rounded-xl border border-emerald-400/25 space-y-2.5">
+                <h4 class="font-bold text-emerald-300 text-sm">Cakupan Pengujian Otomatis</h4>
+                <p class="text-slate-300 leading-relaxed">Parser NLU berbahasa Indonesia diuji terhadap 12+ skenario cepat, query majemuk (<i>"Syarat renovasi 300jt wiraswasta"</i>), deteksi bebas bentrok angka berdekatan, serta isolasi state saat perbandingan produk.</p>
+              </div>
+            </div>
+            <div class="text-[11px] text-teal-200 border-t border-white/10 pt-3 flex justify-between">
+              <span>Live Demo: bni-griya-assistant.vercel.app</span>
+              <span class="font-bold text-white">Muhammad Saddam M. R. Alyudin, S.Stat.</span>
+            </div>
+          </div>
+          `
+        ]
+      }
 
     };
 
@@ -3747,7 +4171,7 @@
           ? 'Portfolio_Muhammad_Saddam_SCCT_Control_Tower.pdf' 
           : currentDeckKey === 'bulog'
             ? 'Portfolio_Muhammad_Saddam_Conversational_AI_Retail.pdf'
-            : currentDeckKey === 'skripsi' ? 'Portfolio_Muhammad_Saddam_Clustering_FKM_PAM_Jawa.pdf' : 'Portfolio_Muhammad_Saddam_Fiscal_Governance_AI.pdf';
+            : currentDeckKey === 'skripsi' ? 'Portfolio_Muhammad_Saddam_Clustering_FKM_PAM_Jawa.pdf' : currentDeckKey === 'bnigriya' ? 'Portfolio_Muhammad_Saddam_BNI_Griya_Assistant.pdf' : 'Portfolio_Muhammad_Saddam_Fiscal_Governance_AI.pdf';
 
         pdf.save(fileName);
       } catch (err) {
@@ -4138,7 +4562,49 @@
       }
     }
 
-    // Project 01 (Fiscal & Governance AI) Interactive Tab Controller
+    // Project 01 (BNI Griya Smart KPR Assistant) Card Preview Switcher
+    const BNI_PREVIEWS = {
+      beli: {
+        title: "Preset: Pembelian Rumah Rp750 Jt · DP 15% · Tenor 20 Thn",
+        desc: "Input hybrid (Gaji Rp15 Jt, Usia 29 thn BUMN) &rarr; klik <b>Kirim ke Chatbot &amp; Aktifkan Tabel</b>. Plafon Rp637,5 Jt, cicilan Fixed 5,25% sekitar <b>Rp4,29 Jt/bln</b> (DSR Aman 28,6%).",
+        pmt: "Rp4.295.775/bln",
+        badge: "DSR 28,6% · Lolos",
+        badgeCls: "text-sm font-extrabold text-emerald-300"
+      },
+      takeover: {
+        title: "Preset: Take Over Sisa Pokok Rp500 Jt (Bunga Asal 12,5%)",
+        desc: "Membandingkan cicilan bank asal (<b>Rp6,16 Jt/bln</b>) vs BNI Griya Fixed 5,25% (<b>Rp4,02 Jt/bln</b>) + opsi <b>Take Over Plus</b> dana tunai &amp; syarat PK + mutasi 3–6 bln.",
+        pmt: "Rp4.019.388/bln",
+        badge: "Hemat Rp2,14 Jt/bln",
+        badgeCls: "text-sm font-extrabold text-amber-300"
+      },
+      cermat: {
+        title: "Preset: KPR Cermat Saldo Keluarga (SRH Rp300 Jt · 1 KK)",
+        desc: "Dana tabungan <b>tidak diblokir</b>, tetap dapat bunga tabungan reguler, &amp; memangkas suku bunga KPR s.d. <b>-1,00% p.a.</b> (Tier &gt;50%–100% memberi diskon <b>-0,75% p.a.</b>).",
+        pmt: "Diskon -0,75% p.a.",
+        badge: "Maks 5 Taplus 1 KK",
+        badgeCls: "text-sm font-extrabold text-teal-300"
+      }
+    };
+    function switchBniPreview(mode) {
+      const p = BNI_PREVIEWS[mode];
+      if (!p) return;
+      ['beli', 'takeover', 'cermat'].forEach(k => {
+        const b = document.getElementById('bniPrevBtn-' + k);
+        if (!b) return;
+        b.className = (k === mode)
+          ? "py-2 px-2 rounded-xl bg-[#F15A23] text-white font-bold transition text-center"
+          : "py-2 px-2 rounded-xl bg-[#052338] text-sky-200 hover:text-white border border-sky-400/20 transition text-center";
+      });
+      document.getElementById('bniPrevTitle').innerText = p.title;
+      document.getElementById('bniPrevDesc').innerHTML = p.desc;
+      document.getElementById('bniPrevPmt').innerText = p.pmt;
+      const bg = document.getElementById('bniPrevBadge');
+      bg.innerText = p.badge;
+      bg.className = p.badgeCls;
+    }
+
+    // Project 02 (Fiscal & Governance AI) Interactive Tab Controller
     const FISCAL_TABS = ['chatflow', 'mod1', 'mod2', 'mod3', 'kpidict'];
     function switchFiscalTab(tabKey) {
       FISCAL_TABS.forEach(k => {
@@ -4254,7 +4720,7 @@
     const PIPE_TABS = ['dash', 'ai', 'scct', 'stat'];
     const PIPE_STATUS = {
       dash: '10+ Dashboard Live & 30+ Tab Analisis (Apache Superset)...',
-      ai: 'AI Agent & Chatbot Pendamping Dashboard (Dify AI & n8n)...',
+      ai: 'BNI Griya Smart KPR AI & Chatbot Pendamping (Dify AI & n8n)...',
       scct: 'Supply Chain Control Tower & Peta Utilisasi 34 Provinsi...',
       stat: 'Pemodelan Klastering Fuzzy K-Medoids pada 119 Kab/Kota Jawa...'
     };
